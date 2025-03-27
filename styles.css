@@ -1,0 +1,418 @@
+/* Importação de fonte opcional */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'fontgrotesk';
+    src: url('./fonts/PPRightGrotesk-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fontmedium';
+    src: url('./fonts/PPNeueMontreal-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fontbook';
+    src: url('./fonts/PPNeueMontreal-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* HERO SECTION */
+body {
+    
+    background: #f8f8f8;
+    color: #171718;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+}
+   
+.hero {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    position:relative;
+    padding-left: 4rem; /* 20px */
+    padding-right: 4rem; /* 20px */
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: regular;
+    padding-top: 1.72rem;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+    padding-left: 4rem; /* 20px */
+    padding-right: 4rem; /* 20px */
+}
+
+.logo {
+    text-decoration: none;
+    font-family: "fontmedium";
+    font-size: 0.87rem; /* 16px */
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul {
+    font-family: "fontmedium";
+    font-size: 0.87rem;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* 20px */
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 0rem;
+  }
+  
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+nav a:hover::after {
+    transform: scaleX(1);
+  }
+  
+nav a::after {
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  
+nav a:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  
+nav a:not(:hover)::after {
+    transform: scaleX(0);
+    transform-origin: right; /* Garante que recolhe da esquerda para a direita */
+  }
+
+h1 {
+    font-family: "fontmedium";
+    font-size: 7.5rem; /* 48px */
+    font-weight: 700;
+    line-height: 1.1;  
+}
+
+h1 span {
+    display: block;
+    font-size: 7.5rem; /* 60px */
+}
+
+.hero_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.hero-info {
+    font-family: PP Neue Montreal;
+    text-align: right;
+    max-width: 16rem;
+}
+
+.hero-info p {
+    font-size: 1.12rem; /* 14px */ 
+}
+
+.year {
+    font-family: "fontbook";
+    font-size: 0.87rem; /* 14px */
+  
+    text-align: right;
+    justify-content: right;
+    padding-top: 2rem;
+}
+
+.scroll-hint {
+    font-family: "fontbook";
+    text-align: center;
+    font-size: 0.87rem; /* 14px */
+  
+    padding-bottom: 2rem;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Pequeno about */
+.intro {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: flex-start; /* Alinha o conteúdo no topo */
+}
+
+/* Container */
+.container {
+    display: flex;
+    align-items: flex-end; /* Alinha o texto da direita na parte inferior */
+    width: 100%;
+    max-width: 100vw; /* Ocupa toda a largura */
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+/* Texto principal */
+.intro-text {
+    font-family: "fontmedium";
+    font-size: 4rem;
+    max-width: 50%;
+    line-height: 1.1;
+    position: relative;
+    text-align: left; /* Alinha completamente à esquerda */
+}
+
+/* Descrição */
+.intro-description {
+    font-family: "fontbook";
+    font-size: 1rem;
+    max-width: 30%;
+    line-height: 1.5;
+    text-align: left;
+}
+
+
+/* NOVA SEÇÃO */
+/* Featured works */
+
+.featured {
+    max-width: 100%;
+    padding-top: 10rem;
+    padding-left: 4rem; /* 20px */
+    padding-right: 4rem; /* 20px */
+}
+
+.SELECTED {
+    font-family: "fontmedium";
+    font-size: 5.9rem;
+    font-weight: bold;
+    margin-bottom: 7.5rem;
+    position: sticky;
+}
+
+/* Grid de projetos */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+}
+
+.project {
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Tamanhos diferentes */
+.small {
+    grid-column: span 6;
+    height: auto;
+}
+
+/* Placeholder da imagem */
+.image-placeholder {
+    background: rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+    height: 40.6rem;
+}
+
+/* Estilo do rodapé */
+.work_container {
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
+}
+
+.worktextwrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: "fontmedium";
+    font-size: 1Srem;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    font-family: "fontmedium";
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+.tag {
+    font-family: "fontbook";
+    border-color: #171718;
+    border-style: solid;
+    font-size: 0.87rem;
+    stroke-width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+
+
+/* NOVA SEÇÃO */
+/* Collaborate section */
+.collaborate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 11rem;
+    padding-bottom: 15rem;
+}
+/* Texto superior */
+.cta1 {
+    font-family: "fontmedium";
+    font-size: 1.12rem;
+    font-weight: regular;
+    color: #171718;
+  
+}
+
+/* Título principal */
+.cta2 {
+    font-family: "fontmedium";
+    font-size: 10rem;
+    font-weight: 900;
+    margin-bottom: 0%;
+}
+
+/* Botão de contato */
+.contact-button {
+    font-family: "fontmedium";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9rem;
+    height: 9rem;
+    background: #171718;
+    color: #f8f8f8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.contact-button:hover {
+    background: #f8f8f8;
+    border-color: #171718;
+    border-style: solid;
+    color:#171718;
+    stroke-width: 0.62rem;
+ 
+}
+
+/* Footer */
+
+.footer {
+    background-color: #f8f8f8;
+    padding: 2rem 4rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Esquerda */
+.footer-left {
+    max-height: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer-title {
+    font-family: "fontmedium";
+    font-size: 1.2rem;
+}
+
+.footer-rights {
+    font-family: "fontbook";
+    font-size: 0.87rem;
+    color: #171718;
+}
+
+/* Direita */
+.footer-right {
+    max-height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+/* Links sociais */
+.social-links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 colunas automáticas */
+    gap: 0.5rem 2rem; /* Espaço entre linhas e colunas */
+    align-items: start;
+    justify-content: end;
+}
+
+.social-links li {
+    display: inline;
+}
+
+.social-links a {
+    font-family: "fontmedium";
+    text-decoration: none;
+    font-size: 0.87rem;
+    color: #171718;
+    
+    transition: color 0.3s ease-in-out;
+}
+
+/* Texto do desenvolvedor */
+.footer-dev {
+    font-family: "fontbook";
+    font-size: 0.87rem;
+    color: #171718;
+}
