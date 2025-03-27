@@ -69,7 +69,6 @@ header {
     text-decoration: none;
     font-family: "fontmedium";
     font-size: 0.87rem; /* 16px */
-    
 }
 
 a {
@@ -406,7 +405,6 @@ h3 {
     text-decoration: none;
     font-size: 0.87rem;
     color: #171718;
-    
     transition: color 0.3s ease-in-out;
 }
 
@@ -415,4 +413,68 @@ h3 {
     font-family: "fontbook";
     font-size: 0.87rem;
     color: #171718;
+}
+
+/* Página WORKS */
+.container_works {
+    max-height: 26.5rem;
+    max-width: 120rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 15rem;
+}
+
+/* Estrutura da seção do projeto */
+.works {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Informação do projeto */
+.works-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.works-info .wrap{
+    display: flex;
+    gap: 6rem;
+}
+
+.work-year {
+    font-family: "fontbook";
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.work-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.work-description {
+    width: 24rem;
+    font-family: "fontbook";
+    font-size: 1rem;
+    padding-top: 1.5rem;
+    color: #171718;
+}
+
+.view-project {
+    font-family: "fontmedium";
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #171718;
+    display: inline-block;
+    margin-top: 3rem;
+}
+
+/* Imagem do projeto */
+.work-image {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 33.37em;
+    height: 26.5rem;
 }
