@@ -138,6 +138,13 @@ h2 {
     font-weight: 500;
 }
 
+h3 {
+    font-family: "fontmedium";
+    font-size: 6rem;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
 .from {
     text-transform: uppercase;
     text-align: right;
@@ -320,13 +327,6 @@ h1 span {
     transform: translateY(0); /
 } */
 
-h3 {
-    font-family: "fontmedium";
-    font-size: 6rem;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
-}
-
 /* .project-nameheading {
     opacity: 0;
     transform: translateY(0.5rem); 
@@ -441,74 +441,6 @@ h3 {
     width: 50%;
     text-decoration: none;
     padding: 1.12rem 0;
-}
-
-/* Creative Capabilities Section 
-.capabilities {
-    width: 100%;
-    padding: 10rem 0;
-    display: flex;
-    justify-content: center;
-    background: #f8f8f8;
-}
-
-.capabilities-container {
-    width: 93%;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-}
-
-.capabilities-heading {
-    font-family: "fontmedium";
-    font-size: 3rem;
-    font-weight: bold;
-    color: #171718;
-    position: relative;
-    align-self: flex-start;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-}
-
-.skill-category {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.skill-title {
-    font-family: "fontmedium";
-    font-size: 1rem;
-    font-weight: bold;
-    color: #171718;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: transform 0.3s ease;
-}
-
-.skill-title:hover {
-    transform: translateX(5px);
-} */
-
-/* Responsividade */
-@media (max-width: 1024px) {
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .capabilities-heading {
-        font-size: 4rem;
-    }
 }
 
 /* Collaborate Section */
@@ -722,39 +654,106 @@ h3 {
 /* Project page */
 
 .hero-projects {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     width: 100%;
-    position: relative;
-    overflow: hidden; 
   }
   
   .project_container {
     display: flex;
-    justify-content: center; 
-    align-items: center;     
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
   }
   
   .image-placeholder-project {
-    height: 100%;
     width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .image-placeholder-project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-details2 {
+    width: 93%;
+    padding: 7rem 0;
+    display: flex;
+    gap: 5rem;
+  }
+  
+  .project-title {
+    width: 30%;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .project-title h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0;
+  }
+  
+  .project-description {
+    width: 70%;
+    font-size: 1.6rem;
+    color: #000;
+  }
+  
+  .project-description p {
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+  
+  .project-meta {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .project-meta-item dt {
+    color: #9E9E9E;
+    font-size: 1.4rem;
+  }
+  
+  .project-meta-item dd {
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  
+  .img-fullscreen {
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
   }
   
-  .image-placeholder-project img {
-    height: 100%;
+  .img-fullscreen img {
     width: 100%;
-    object-fit: cover; 
-    object-position: center; 
-    display: block;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .next-workcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8rem 0;
+  }
+  
+  .next-work {
+    font-family: "fontmedium";
+    font-size: 7rem;
+    font-weight: 600;
+    color: #171718;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding-bottom: 0.3rem;
   }
   
