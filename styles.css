@@ -35,7 +35,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #171718;
+    color: white
 }
 
 strong {
@@ -55,6 +55,7 @@ header {
     top: 0;
     left: 0;
     z-index: 999;
+    mix-blend-mode: difference;
 }
 
 nav {
@@ -75,6 +76,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    color: #f8f8f8;
 }
 
 nav a {
