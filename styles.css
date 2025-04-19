@@ -109,6 +109,18 @@ nav a:not(:hover)::after {
     transform-origin: right;
 }
 
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%; /* meio vertical do texto */
+    width: 100%;
+    height: 1.5px;
+    background-color: white;
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+
 /* Hero Section */
 .hero {
     flex-grow: 1;
@@ -265,6 +277,7 @@ h1 span {
     display: flex;
     justify-content: space-between;
     align-items: flex-end; 
+    padding-bottom: 2rem;
 }
 
 .selected {
@@ -307,106 +320,70 @@ h1 span {
 .projects {
     width: 93%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.12rem;
 }
 
-.project-small {
-    width: 100%;
-    display: flex;
-    gap: 2rem;
-    transition: 0.3s ease-in-out;
-    padding-bottom: 5rem;
-    margin-top: 2rem;
-}
-
-.project-small.reverse {
-    flex-direction: row-reverse;
-}
-
-.project-small.last {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.image-placeholder {
-    background: rgba(0, 0, 0, 0.2);
-    height: 33.6rem;
-    width: 45%;
+.img-wrapper {
     position: relative;
+    width: 100%;
+    height: 46rem;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-}
-
-.image-placeholder img {
+  }
+  
+  .img-wrapper img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
     object-position: center;
-    display: block;
     transition: transform 0.5s ease;
+    z-index: 1;
+    filter: brightness(0.9);
+  }
+  
+  .project-type {
+    font-family: "fontmedium";
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    color: #f8f8f8;
+    font-size: 1.12rem;
+    z-index: 2;
+  }
+
+  .project-name {
+    font-family: "fontmedium";
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: #f8f8f8;
+    font-size: 1.12rem;
+    z-index: 3;
 }
 
 /* Efeito hover zoom */
-.image-placeholder:hover img {
-    transform: scale(1.03);
+.img-wrapper:hover img {
+    transform: scale(1.05);
     opacity: 90%;
 }
 
-.project-name {
-    width: 55%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 33rem;
-    color: #171718;
-}
-
-.view-project {
+.hover-text {
+    position: absolute;
     font-family: "fontmedium";
-    opacity: 1; 
-    transform: translateY(0.5rem); 
-    transition: opacity 0.3s ease, transform 0.3s ease; 
-    font-size: 1.2rem;
-}
-
-.project-type {
-    font-family: "fontmedium";
-    opacity: 50%;
-    font-size: 1.2rem;
-}
-
-.view-project a {
-    color: #171718;
-}
-
-.view-project2 {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.2rem;
-}
-
-.project-type.reverse {
-    display: block;
-    text-align: right;
-}
-
-/*.project-small:hover .view-project {
-    opacity: 1; 
-    transform: translateY(0); /
-} */
-
-/* .project-nameheading {
+    color: #f8f8f8;
+    font-size: 1.5rem;
     opacity: 0;
-    transform: translateY(0.5rem); 
-    transition: opacity 0.3s ease, transform 0.3s ease; 
-} */
-
-.project-small:hover .project-nameheading {
-    opacity: 1; 
-    transform: translateY(0); /
-}
+    transition: opacity 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+  
+  .img-wrapper:hover .hover-text {
+    opacity: 1;
+  }
 
 .see-more {
     font-family: "fontmedium";
@@ -424,7 +401,7 @@ h1 span {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 20rem;
+    padding-top: 15rem;
     padding-bottom: 20rem;
 }
 
@@ -762,19 +739,26 @@ h1 span {
   
   .project-title h1 {
     font-size: 6rem;
-    font-weight: 900;
+    font-weight: 500;
     margin: 0;
+  }
+
+  .project-title p {
+    font-family: "fontmedium";
+    text-decoration: none;
   }
   
   .project-description {
     width: 70%;
     font-size: 1.6rem;
-    color: #000;
+    color: #171718
   }
   
   .project-description p {
     margin-bottom: 2.5rem;
     line-height: 1.6;
+    font-family: "fontmedium";
+    font-size: 1.5rem;
   }
   
   .project-meta {
@@ -784,18 +768,20 @@ h1 span {
   }
   
   .project-meta-item dt {
-    color: #9E9E9E;
-    font-size: 1.4rem;
+    color: #171718;
+    font-size: 1.2rem;
+    font-family: "fontmedium";
+    padding-bottom: 0.5rem;
   }
   
   .project-meta-item dd {
-    font-weight: 500;
-    font-size: 1.4rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: "fontbook";
   }
   
   .img-fullscreen {
-    width: 100%;
-    height: 100vh;
+    width: 93%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -807,17 +793,186 @@ h1 span {
     height: 100%;
     object-fit: contain;
   }
-  
-  .next-workcontainer {
+
+  .case-study {
+    pointer-events: none;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+}
+
+.case-study-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 93%;
+    padding-top: 1.2rem;
+}
+
+.casestudy-text {
+    width: 55%;
+    text-align: left;
+}
+
+.casestudy-about {
+    font-family: "fontmedium";
+    font-size: 5rem;
+    font-weight: medium;
+    line-height: 1.1;
+}
+
+.fontcolor {
+    display: inline;
+}
+  
+  .casestudy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 62%;
+    justify-items: end;
+}
+  
+  .casestudy-card {
+    position: relative;
+    padding: 1.5rem;
+    background-color: #272523;
+    height: 20rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+  
+  .casestudy-title {
+    font-size: 1.12rem;
+    font-family: "fontbook";
+    font-weight: bold;
+    color: #f8f8f8;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 0;
+    opacity: 1;
+    pointer-events: none;
+    line-height: 1;
+}
+  
+  .casestudy-desc {
+    font-family: "fontmedium";
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #f8f8f8;
+    position: relative;
+    z-index: 1;
+}
+  
+.casestudy-card2 {
+    position: relative;
+    padding: 1.5rem;
+    border-color: #9E9E9E;
+    border-width: 0.05rem;
+    border-style: solid;
+    height: 20rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.casestudy-title2 {
+    font-size: 1.12rem;
+    font-family: "fontbook";
+    font-weight: bold;
+    color: #171718;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 0;
+    opacity: 1;
+    pointer-events: none;
+    line-height: 1;
+}
+  
+  .casestudy-desc2 {
+    font-family: "fontmedium";
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #171718;
+    position: relative;
+    z-index: 1;
+}
+
+.font-title {
+    padding-top: 2rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: solid #9E9E9E;
+}
+
+.font-about {
+    font-family: "fontbook";
+    font-size: 2.5rem;
+    font-weight: 400;
+    opacity: 1;
+    color: #171718;
+    padding-bottom: 0.5rem;
+}
+
+.project-image {
+    width: 93%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.12rem;
+}
+
+.projectimg-wrapper {
+    position: relative;
+    width: 100%;
+    height: 46rem;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .projectimg-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+    z-index: 1;
+  }
+
+  .projectimg-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.nextworks {
+    width: 93%;
+    display: flex;
+  }
+  
+  .next-workcontainer {
+    width: 100%;
     padding: 8rem 0;
+    display: flex;               
+    justify-content: center;   
+    align-items: center;
+    flex-direction: column;   
+  }
+
+  .next-workcontainer p {
+    font-family: "fontbook";
+    font-size: 1.5rem;
   }
   
   .next-work {
     font-family: "fontmedium";
-    font-size: 7rem;
+    font-size: 2rem;
     font-weight: 600;
     color: #171718;
     text-decoration: none;
