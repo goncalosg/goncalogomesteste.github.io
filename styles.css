@@ -43,6 +43,8 @@ strong {
     font-weight: bold;
 }
 
+/* HOME PAGE */
+
 /* Header */
 header {
     display: flex;
@@ -203,7 +205,7 @@ h1 span {
 }
 
 .container-about {
-    display: flex;
+    display: inline;
     justify-content: space-between;
     align-items: flex-start;
     width: 93%;
@@ -211,13 +213,15 @@ h1 span {
 }
 
 .intro-text {
-    width: 45%;
+    width: 100%;
     text-align: left;
+    border-bottom: solid #9E9E9E;
+    padding-bottom: 1rem;
 }
 
 .intro-about {
     font-family: "fontbook";
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: medium;
     line-height: 1.1;
 }
@@ -225,10 +229,27 @@ h1 span {
 .intro-description {
     font-family: "fontmedium";
     font-size: 3rem;
+    font-weight: 400;
+    width: 90%;
+    justify-content: right;
+    justify-items: right;
+    padding-top: 1rem;
+}
+
+.intro-description p {
+    width: 70%;
+}
+
+.intro-description2 {
+    font-family: "fontmedium";
+    font-size: 3rem;
+    width: 90%;
+    justify-content: left;
+    justify-items: left;
+}
+
+.intro-description2 p {
     width: 100%;
-    margin-left: 4.5rem;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
 }
 
 /* Featured Works */
@@ -243,7 +264,7 @@ h1 span {
     width: 93%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* Alinha os itens na base */
+    align-items: flex-end; 
 }
 
 .selected {
@@ -301,12 +322,12 @@ h1 span {
 
 .project-small.reverse {
     flex-direction: row-reverse;
-  }
+}
 
-  .project-small.last {
+.project-small.last {
     border-bottom: none;
     padding-bottom: 0;
-  }
+}
 
 .image-placeholder {
     background: rgba(0, 0, 0, 0.2);
@@ -326,7 +347,7 @@ h1 span {
     transition: transform 0.5s ease;
 }
 
-/* Efeito hover para zoom sutil */
+/* Efeito hover zoom */
 .image-placeholder:hover img {
     transform: scale(1.03);
     opacity: 90%;
@@ -347,7 +368,6 @@ h1 span {
     transform: translateY(0.5rem); 
     transition: opacity 0.3s ease, transform 0.3s ease; 
     font-size: 1.2rem;
-    
 }
 
 .project-type {
@@ -409,7 +429,6 @@ h1 span {
 }
 
 .container-expertise {
-    border-top: solid #9E9E9E;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -423,33 +442,55 @@ h1 span {
 }
 
 .expertise-about {
-    font-family: "fontbook";
-    font-size: 1.5rem;
+    font-family: "fontmedium";
+    font-size: 5rem;
     font-weight: medium;
     line-height: 1.1;
 }
-
-.expertise-list{
-    list-style: none;
-    width: 45%;
-    margin-top: -1.12rem;
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 62%;
+    justify-items: end;
 }
-
-.expertise-description {
+  
+  .service-card {
+    position: relative;
+    padding: 1.5rem;
+    border-color: #9E9E9E;
+    border-width: 0.05rem;
+    border-style: solid;
+    height: 20rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+  
+  .service-title {
+    font-size: 1.12rem;
+    font-family: "fontbook";
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #171718;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 0;
+    opacity: 1;
+    pointer-events: none;
+    line-height: 1;
+}
+  
+  .service-desc {
     font-family: "fontmedium";
     font-size: 2rem;
-    width: 100%;
-    line-height: 1.2;
-    border-bottom: solid #9E9E9E;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-}
-
-.expertise-list li p{
-    width: 50%;
-    text-decoration: none;
-    padding: 1.12rem 0;
+    line-height: 1.6;
+    color: #171718;
+    position: relative;
+    z-index: 1;
 }
 
 /* Collaborate Section */
@@ -489,19 +530,19 @@ h1 span {
     color: #171718;
     text-decoration: none;
     position: relative;
-    display: inline-flex;  /* Alterado para flex */
+    display: inline-flex;  
     align-items: center;
     gap: 0.3rem;
-    padding-bottom: 0.3rem;  /* Espaço para o underline */
+    padding-bottom: 0.3rem;
 }
 
 .contact-me::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0.12rem;  /* Alterado para 0 */
+    bottom: 0.12rem;  
     width: 100%;
-    height: 0.12rem;  /* Espessura em px para maior confiabilidade */
+    height: 0.12rem;  
     background-color: #171718;
     transform: scaleX(0);
     transform-origin: right center;
@@ -555,7 +596,6 @@ h1 span {
 }
 
 .social-links {
-    
     list-style: none;
     display: flex;
     grid-template-columns: repeat(2, auto);
@@ -598,7 +638,30 @@ h1 span {
 
 /* Página WORKS */
 
-/* ===== PROJECTS ===== */
+/* Works */
+
+.allworks-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+  }
+
+  .allworks-container {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .allworks {
+    font-family: "fontmedium";
+    font-size: 10rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
 
 .projects_section {
     width: 100%;
@@ -617,6 +680,7 @@ h1 span {
 .projects_list{
     width: 100%;
     list-style: none;
+    text-decoration: none;
 }
 
 .projects_list li a{
@@ -628,15 +692,10 @@ h1 span {
     gap: 10rem;
     text-decoration: none;
     padding: 2rem 0;
-    border-top: 0rem solid #171718;
     position: relative;
     transition: all 0.1s ease;
+    border-top: solid #9E9E9E;
 }
-
-.projects_list li a:hover{
-    border-bottom: 0.1rem solid #171718;
-}
-
 
 .projects_list .img_container{
     position: absolute;
@@ -648,7 +707,7 @@ h1 span {
     height: 21.25rem;
     width: 31.25rem;
     opacity: 0;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .projects_list li a:hover .img_container{
@@ -662,7 +721,7 @@ h1 span {
     object-fit: cover;
 }
 
-/* Project page */
+/* PROJECT PAGE */
 
 .hero-projects {
     width: 100%;
@@ -768,7 +827,7 @@ h1 span {
     padding-bottom: 0.3rem;
   }
   
-  /* About page */
+  /* ABOUT PAGE */
 
 .hero-about {
     width: 100%;
@@ -784,12 +843,23 @@ h1 span {
     display: flex;
     justify-content: space-between;
     align-items: end;
+    min-height: 85vh; 
   }
   
   .image-placeholder-about {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem; 
     width: 40%;
-    height: 50rem;
+    height: 98vh;
     overflow: hidden;
+    border-radius: 0 1rem 1rem 0;
+  }
+  
+  .image-placeholder-about img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .about-data {
@@ -800,7 +870,7 @@ h1 span {
   .h1-about {
     font-family: "fontmedium";
     font-size: 12rem;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.1;
   }
 
@@ -819,19 +889,19 @@ h1 span {
     font-weight: 400;
     text-decoration: none;
     position: relative;
-    display: inline-flex;  /* Alterado para flex */
+    display: inline-flex;  
     align-items: center;
     gap: 0.3rem;
-    padding-bottom: 0.3rem;  /* Espaço para o underline */
+    padding-bottom: 0.3rem;
 }
 
 .contact-me2::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0.12rem;  /* Alterado para 0 */
+    bottom: 0.12rem;  
     width: 100%;
-    height: 0.12rem;  /* Espessura em px para maior confiabilidade */
+    height: 0.12rem; 
     background-color: #171718;
     transform: scaleX(0);
     transform-origin: right center;
@@ -866,9 +936,9 @@ h1 span {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0.12rem;  /* Alterado para 0 */
+    bottom: 0.12rem;  
     width: 100%;
-    height: 0.12rem;  /* Espessura em px para maior confiabilidade */
+    height: 0.12rem;  
     background-color: #171718;
     transform: scaleX(0);
     transform-origin: right center;
@@ -909,13 +979,12 @@ h1 span {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 20rem;
+    padding-top: 5rem;
     padding-bottom: 20rem;
 }
 
 .container-workexperience {
-    border-top: solid #9E9E9E;
-    display: flex;
+    display: inline;
     justify-content: space-between;
     align-items: flex-start;
     width: 93%;
@@ -923,36 +992,57 @@ h1 span {
 }
 
 .work-text {
-    width: 55%;
+    width: 100%;
     text-align: left;
+    border-bottom: solid #9E9E9E;
 }
 
 .work-about {
     font-family: "fontbook";
-    font-size: 1.5rem;
-    font-weight: medium;
-    line-height: 1.1;
+    font-size: 2.5rem;
+    font-weight: 400;
+    opacity: 85%;
+    padding-bottom: 0.5rem;
+}
+
+.container-list {
+    list-style: none;
+    width: 100%;
+    justify-content: right;
+    justify-items: right;
+    
 }
 
 .work-list{
     list-style: none;
-    width: 45%;
-    margin-top: -1.12rem;
+    width: 50%;
 }
 
 .work-description {
-    font-family: "fontmedium";
-    font-size: 2rem;
     width: 100%;
-    line-height: 1.2;
     border-bottom: solid #9E9E9E;
     justify-content: space-between;
-    display: flex;
-    align-items: center;
 }
 
 .work-list li p{
     width: 50%;
     text-decoration: none;
-    padding: 1.12rem 0;
+    padding-top: 1.12rem;
+}
+
+.work-title {
+    font-size: 1.2rem;
+    font-family: "fontmedium";
+}
+
+.work-position {
+    font-size: 1.12rem;
+    font-family: "fontmedium";
+    opacity: 85%;
+    padding-bottom: 1rem;
+}
+
+.work-descriptionnoborder {
+    width: 100%;
+    justify-content: space-between;
 }
