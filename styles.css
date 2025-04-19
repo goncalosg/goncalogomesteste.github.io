@@ -35,7 +35,6 @@ body {
 
 a {
     text-decoration: none;
-    color: white
 }
 
 strong {
@@ -76,12 +75,13 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
-    color: #f8f8f8;
+    color:white;
 }
 
 nav a {
     position: relative;
     padding: 0;
+    color: white;
 }
 
 nav a::after {
@@ -91,7 +91,7 @@ nav a::after {
     bottom: -0.12rem;
     width: 100%;
     height: 0.12rem;
-    background-color: #171718;
+    background-color: white;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
@@ -131,7 +131,6 @@ h1 {
     font-size: 1.12rem;
     font-weight: 400;
     line-height: 1.1;
-    
 }
 
 h2 {
@@ -191,6 +190,47 @@ h1 span {
     text-transform: uppercase;
 }
 
+/* Intro Section */
+.intro {
+    pointer-events: none;
+    background-color: #f8f8f8;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+}
+
+.container-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 93%;
+    padding-top: 1.2rem;
+}
+
+.intro-text {
+    width: 45%;
+    text-align: left;
+}
+
+.intro-about {
+    font-family: "fontbook";
+    font-size: 1.5rem;
+    font-weight: medium;
+    line-height: 1.1;
+}
+
+.intro-description {
+    font-family: "fontmedium";
+    font-size: 3rem;
+    width: 100%;
+    margin-left: 4.5rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
 /* Featured Works */
 .featured {
     width: 100%;
@@ -204,8 +244,6 @@ h1 span {
     display: flex;
     justify-content: space-between;
     align-items: flex-end; /* Alinha os itens na base */
-    border-bottom: solid #9E9E9E;
-    padding-bottom: 1rem;
 }
 
 .selected {
@@ -257,14 +295,12 @@ h1 span {
     display: flex;
     gap: 2rem;
     transition: 0.3s ease-in-out;
-    border-bottom: solid #9E9E9E;
-    padding-bottom: 2.5rem;
-    margin-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 2rem;
 }
 
 .project-small.reverse {
     flex-direction: row-reverse;
-    margin-top: 5rem;
   }
 
   .project-small.last {
@@ -302,14 +338,26 @@ h1 span {
     justify-content: space-between;
     flex-direction: column;
     height: 33rem;
+    color: #171718;
 }
 
 .view-project {
-    font-family: "fontbook";
+    font-family: "fontmedium";
     opacity: 1; 
     transform: translateY(0.5rem); 
     transition: opacity 0.3s ease, transform 0.3s ease; 
-    font-size: 1.12rem; 
+    font-size: 1.2rem;
+    
+}
+
+.project-type {
+    font-family: "fontmedium";
+    opacity: 50%;
+    font-size: 1.2rem;
+}
+
+.view-project a {
+    color: #171718;
 }
 
 .view-project2 {
@@ -319,7 +367,7 @@ h1 span {
     margin-top: 0.2rem;
 }
 
-.view-project.reverse {
+.project-type.reverse {
     display: block;
     text-align: right;
 }
@@ -346,47 +394,6 @@ h1 span {
     font-weight: bold;
     padding-top: 2.5rem;
     width: 93%;
-}
-
-/* Intro Section */
-.intro {
-    pointer-events: none;
-    background-color: #f8f8f8;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 20rem;
-    padding-bottom: 20rem;
-}
-
-.container-about {
-    border-top: solid #9E9E9E;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 93%;
-    padding-top: 1.2rem;
-}
-
-.intro-text {
-    width: 45%;
-    text-align: left;
-}
-
-.intro-about {
-    font-family: "fontbook";
-    font-size: 1.5rem;
-    font-weight: medium;
-    line-height: 1.1;
-}
-
-.intro-description {
-    font-family: "fontmedium";
-    font-size: 2rem;
-    width: 100%;
-    line-height: 1.2;
-    margin-left: 4.5rem;
 }
 
 /* Expertise Section */
@@ -548,6 +555,7 @@ h1 span {
 }
 
 .social-links {
+    
     list-style: none;
     display: flex;
     grid-template-columns: repeat(2, auto);
@@ -555,6 +563,7 @@ h1 span {
 }
 
 .social-links a {
+    color: #171718;
     font-family: "fontmedium";
     font-size: 1.12rem;
     padding-bottom: 0.3rem;
@@ -759,3 +768,191 @@ h1 span {
     padding-bottom: 0.3rem;
   }
   
+  /* About page */
+
+.hero-about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9rem;
+  }
+  
+  .about-container {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  
+  .image-placeholder-about {
+    width: 40%;
+    height: 50rem;
+    overflow: hidden;
+  }
+
+  .about-data {
+    width: 60%;
+    padding-bottom: 1.5rem;
+  }
+
+  .h1-about {
+    font-family: "fontmedium";
+    font-size: 12rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  .p-about {
+    font-family: "fontbook";
+    font-size: 1.12rem;
+    font-weight: 400;
+    width: 60%;
+    padding-bottom: 2rem;
+  }
+
+  .contact-me2 {
+    font-family: "fontmedium";
+    font-size: 0.87rem;
+    color: #171718;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;  /* Alterado para flex */
+    align-items: center;
+    gap: 0.3rem;
+    padding-bottom: 0.3rem;  /* Espaço para o underline */
+}
+
+.contact-me2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.12rem;  /* Alterado para 0 */
+    width: 100%;
+    height: 0.12rem;  /* Espessura em px para maior confiabilidade */
+    background-color: #171718;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.3s ease;
+}
+
+.contact-me2:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+  .social-links-about {
+    padding-top: 2rem;
+    list-style: none;
+    display: flex;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+}
+
+.social-links-about a {
+    text-transform: uppercase;
+    color: #171718;
+    font-family: "fontmedium";
+    font-size: 0.87rem;
+    padding-bottom: 0.3rem;
+    position: relative;
+    gap: 0.3rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links-about a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.12rem;  /* Alterado para 0 */
+    width: 100%;
+    height: 0.12rem;  /* Espessura em px para maior confiabilidade */
+    background-color: #171718;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.3s ease;
+}
+
+.social-links-about a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+.experience {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+  }
+
+  .experience-container {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .experience-container h1 {
+    font-family: "fontmedium";
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .work-experience {
+    pointer-events: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+}
+
+.container-workexperience {
+    border-top: solid #9E9E9E;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 93%;
+    padding-top: 1.2rem;
+}
+
+.work-text {
+    width: 55%;
+    text-align: left;
+}
+
+.work-about {
+    font-family: "fontbook";
+    font-size: 1.5rem;
+    font-weight: medium;
+    line-height: 1.1;
+}
+
+.work-list{
+    list-style: none;
+    width: 45%;
+    margin-top: -1.12rem;
+}
+
+.work-description {
+    font-family: "fontmedium";
+    font-size: 2rem;
+    width: 100%;
+    line-height: 1.2;
+    border-bottom: solid #9E9E9E;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.work-list li p{
+    width: 50%;
+    text-decoration: none;
+    padding: 1.12rem 0;
+}
