@@ -195,7 +195,7 @@ h1 span {
     font-family: "fontmedium";
     font-weight: 500;
     text-align: center;
-    font-size: 11.6rem;
+    font-size: 11vw;
     padding-bottom: 2rem;
     position: absolute;
     left: 0;
@@ -327,7 +327,6 @@ h1 span {
     position: relative;
     width: 100%;
     height: 46rem;
-    overflow: hidden;
     transition: all 0.3s ease-in-out;
   }
   
@@ -364,23 +363,24 @@ h1 span {
 
 /* Efeito hover zoom */
 .img-wrapper:hover img {
-    transform: scale(1.05);
+   /* transform: scale(1.05); */
     opacity: 90%;
 }
 
 .hover-text {
-    position: absolute;
+    position: relative;
     font-family: "fontmedium";
-    color: #f8f8f8;
-    font-size: 1.5rem;
+    color: #171718;
+    font-size: 1.2rem;
     opacity: 0;
-    transition: opacity 0.3s ease;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
-  }
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: right;
+    margin-top: 1rem;
+    transform: translateY(4rem) 0.3 ease;
+}
   
   .img-wrapper:hover .hover-text {
+    transform: translateY(0);
     opacity: 1;
   }
 
@@ -401,7 +401,7 @@ h1 span {
     justify-content: center;
     align-items: flex-start;
     padding-top: 15rem;
-    padding-bottom: 20rem;
+    padding-bottom: 22rem;
 }
 
 .container-expertise {
@@ -624,6 +624,150 @@ h1 span {
     opacity: 0;
 }
 
+@media (max-width: 768px) {
+    /* TABLET */
+
+    /* Intro */
+
+    .intro-description .p-description {
+        font-size: 2rem;
+    }
+
+    /* Featured Works */
+    .selected {
+        font-size: 3rem;
+    }
+
+    .projects {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .project-name {
+        bottom: 4rem;
+      }
+
+    .projects .img-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .projects .img-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-wrapper:hover img {
+        pointer-events: none;
+     }
+
+    .img-wrapper:hover .hover-text {
+        pointer-events: none;
+    }
+
+    /* Expertises */
+    .expertise-about {
+        font-size: 3rem;
+    }
+
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-card {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    /* CTA */
+    .cta2 {
+        font-size: 8rem;
+    }
+
+    .contact-me {
+        font-size: 1.2rem;
+    }
+
+    /* Footer */
+    .social-links {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 320px) {
+    /* TABLET */
+
+    /* Intro */
+
+    .intro-description .p-description {
+        font-size: 5rem;
+    }
+
+    /* Featured Works */
+    .selected {
+        font-size: 3rem;
+    }
+
+    .projects {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .project-name {
+        bottom: 4rem;
+      }
+
+    .projects .img-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .projects .img-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-wrapper:hover img {
+        pointer-events: none;
+     }
+
+    .img-wrapper:hover .hover-text {
+        pointer-events: none;
+    }
+
+    /* Expertises */
+    .expertise-about {
+        font-size: 3rem;
+    }
+
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-card {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    /* CTA */
+    .cta2 {
+        font-size: 8rem;
+    }
+
+    .contact-me {
+        font-size: 1.2rem;
+    }
+
+    /* Footer */
+    .social-links {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /* Página WORKS */
 
 /* Works */
@@ -634,7 +778,8 @@ h1 span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15rem;
+    margin-top: 12rem;
+    padding-bottom: 5rem;
   }
 
   .allworks-container {
@@ -646,7 +791,7 @@ h1 span {
 
   .allworks {
     font-family: "fontmedium";
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: 400;
     line-height: 1.1;
 }
@@ -656,6 +801,7 @@ h1 span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10rem;
 }
 
 .project-main {
@@ -671,6 +817,26 @@ h1 span {
     text-decoration: none;
 }
 
+.text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* espaçamento entre h3 e p */
+}
+
+.projects_list h3 {
+    font-family: "fontmedium";
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.projects_list p {
+    font-family: "fontmedium";
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
 .projects_list li a{
     display: flex;
     height: 9rem;
@@ -683,6 +849,10 @@ h1 span {
     position: relative;
     transition: all 0.1s ease;
     border-top: solid #9E9E9E;
+}
+
+.lastli {
+    border-bottom: solid #9E9E9E;
 }
 
 .projects_list .img_container{
@@ -707,6 +877,12 @@ h1 span {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.projects_list li a,
+.projects_list li a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* PROJECT PAGE */
