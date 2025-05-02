@@ -605,7 +605,7 @@ h1 span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 12rem;
+    margin-top: 9rem;
     padding-bottom: 5rem;
   }
 
@@ -782,12 +782,11 @@ h1 span {
     height: 100%;
     object-fit: cover;
   }
-  
+
   .project-details2 {
     width: 93%;
-    padding: 7rem 0;
+    padding: 8rem 0;
     display: flex;
-    gap: 1rem;
   }
   
   .project-title {
@@ -1108,7 +1107,7 @@ h1 span {
 
   .h1-about {
     font-family: "fontmedium";
-    font-size: 12rem;
+    font-size: 13vw;
     font-weight: 400;
     line-height: 1.1;
   }
@@ -1195,7 +1194,7 @@ h1 span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15rem;
+    margin-top: 10rem;
   }
 
   .experience-container {
@@ -1295,7 +1294,7 @@ h1 span {
     justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     /* TABLET */
 
     /* Intro */
@@ -1390,7 +1389,7 @@ h1 span {
     /* WORKS PAGE */
 
     .allworks-container h2 {
-        font-size: 3rem;
+        font-size: 5rem;
     }
     
     .projects_section {
@@ -1425,6 +1424,7 @@ h1 span {
     }
 
     .project-description p {
+        padding-top: 1rem;
         font-size: 1.5rem;
     }
 
@@ -1449,12 +1449,83 @@ h1 span {
     .projectimg-wrapper {
         height: 30rem;
     }
+
+    /* ABOUT PAGE */
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-data {
+        width: 100%;
+    }
+
+    .about-data p {
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+
+    .social-links-about {
+        padding-bottom: 1rem;
+    }
+
+    .image-placeholder-about {
+        top: 0rem;
+        right: 0rem;
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        height: 50rem;
+        overflow: hidden;
+    }
+
+    .image-placeholder-about img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .experience {
+        margin-top: 6rem;
+      }
+
+      .experience-container h1 {
+        font-size: 3rem;
+      }
+      
+      .work-text h2 {
+        font-size: 2rem;
+      }
+
+      .container-list {
+        justify-content: left;
+        justify-items: left;
+        width: 100%;
+      }
+
+      .work-list {
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        width: 100%;
+      }
+
+      .work-experience2 {
+        margin-bottom: 5rem;
+      }
 }
 
 @media (max-width: 480px) {
     /* Mobile */
 
+    body {
+        margin: 0 1rem; /* ou qualquer valor que queiras */
+      }
+
     /* Navbar */
+    nav {
+        margin: 0 1.85rem;
+    }
+
     .logo {
         font-size: 1rem;
     }
@@ -1576,8 +1647,13 @@ h1 span {
     }
     
     /* WORKS PAGE */
+    .allworks-section {
+        padding-bottom: 3rem;
+    }
+
+
     .allworks-container h2 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .tabletwork {
@@ -1646,4 +1722,64 @@ h1 span {
         display: flex;
         flex-direction: column;
     }
+
+    /* ABOUT PAGE */
+    .about-data {
+        width: 100%;
+    }
+
+    .about-data p {
+        font-size: 1.3rem;
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+
+    .social-links-about {
+        flex-direction: column;
+        gap: 0.87rem;
+    }
+
+    .image-placeholder-about {
+        top: 0rem;
+        right: 0rem;
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        height: 28rem;
+        overflow: hidden;
+    }
+
+    .work-experience {
+        padding-top: 1rem;
+    }
+
+    .experience-container h1 {
+        font-size: 2.5rem;
+      }
+      
+      .work-text h2 {
+        font-size: 1.5rem;
+      }
+
+      .container-list {
+        justify-content: left;
+        justify-items: left;
+        width: 100%;
+      }
+
+      .work-list {
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        width: 100%;
+      }
+
+      .work-list li p {
+        width: 100%;
+        font-size: 1.12rem;
+      }
+
+      .work-experience2 {
+        margin-bottom: 5rem;
+        padding-top: 1rem;
+      }
 }
