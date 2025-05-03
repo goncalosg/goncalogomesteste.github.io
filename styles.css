@@ -559,8 +559,6 @@ nav a.active::after {
 .allworks-container h2 {
     font-family: "fontmedium";
     font-size: 8rem;
-    font-weight: 400;
-    line-height: 1.1;
 }
 
 /* Works title */
@@ -588,21 +586,17 @@ nav a.active::after {
 .text_container {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* espaçamento entre h3 e p */
 }
 
 .projects_list h3 {
     font-family: "fontmedium";
     font-size: 3.5rem;
-    font-weight: 400;
-    line-height: 1.1;
 }
 
 .projects_list p {
     font-family: "fontmedium";
     font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 1.1;
+    opacity: 75%;
 }
 
 .projects_list li a{
@@ -611,7 +605,6 @@ nav a.active::after {
     align-items: center;
     justify-content: start;
     width: 100%;
-    gap: 10rem;
     text-decoration: none;
     padding: 2rem 0;
     position: relative;
@@ -653,6 +646,7 @@ nav a.active::after {
   text-decoration: none;
 }
 
+/* Section Mobile */
 .tabletwork {
     width: 100%;
     display: none;
@@ -695,13 +689,13 @@ nav a.active::after {
   }
 
   .tablet-name {
-    font-family: "fontbook";
+    font-family: "fontmedium";
     color: #171718;
     font-size: 1.12rem;
+    opacity: 75%;
 }
 
 /* PROJECT PAGE */
-
 .hero-projects {
     width: 100%;
   }
@@ -740,17 +734,15 @@ nav a.active::after {
   .project-title h1 {
     font-family: "fontmedium";
     font-size: 4rem;
-    font-weight: 500;
   }
 
   .project-title p {
     font-family: "fontmedium";
-    text-decoration: none;
   }
   
   .project-description {
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #171718
   }
   
@@ -761,6 +753,19 @@ nav a.active::after {
     font-size: 1.5rem;
   }
   
+  .project-something {
+    display: flex;
+    align-items: flex-end;
+    gap: 4rem;
+  }
+
+  .project-something a p {
+    color: #171718;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: auto;
+  }
+
   .project-meta {
     display: flex;
     gap: 4rem;
@@ -776,9 +781,10 @@ nav a.active::after {
   
   .project-meta-item dd {
     font-size: 1.2rem;
-    font-family: "fontbook";
+    font-family: "fontmedium";
+    opacity: 75%;
   }
-  
+
   .img-fullscreen {
     width: 93%;
     display: flex;
@@ -844,7 +850,7 @@ nav a.active::after {
   
 .casestudy-card h3 {
     font-size: 1.12rem;
-    font-family: "fontbook";
+    font-family: "fontmedium";
     color: #f8f8f8;
     position: absolute;
     top: 1.5rem;
@@ -876,7 +882,7 @@ nav a.active::after {
 
 .casestudy-title2 {
     font-size: 1.12rem;
-    font-family: "fontbook";
+    font-family: "fontmedium";
     font-weight: bold;
     color: #171718;
     position: absolute;
@@ -988,7 +994,7 @@ nav a.active::after {
 }
 
 .nextprojects_list{
-    justify-content: space-between;
+    gap: 10rem;
     width: 100%;
     list-style: none;
     text-decoration: none;
@@ -1003,16 +1009,12 @@ nav a.active::after {
 
 .nextprojects_list h3 {
     font-family: "fontmedium";
-    font-size: 3.5rem;
-    font-weight: 400;
-    line-height: 1.1;
+    font-size: 3rem;
 }
 
 .nextprojects_list p {
     font-family: "fontmedium";
     font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 1.1;
     opacity: 75%;
 }
 
@@ -1033,7 +1035,7 @@ nav a.active::after {
     position: absolute;
     z-index: 999;
     top: 50%;
-    left: 25%;
+    left: 62%;
     transform-origin: center;
     transform: translate(0%, -50%) scale(0.8);
     height: 15.25rem;
@@ -1259,6 +1261,10 @@ nav a.active::after {
     /* TABLET */
 
     /* Intro */
+    .intro {
+        padding-top: 10rem;
+        padding-bottom: 13rem;
+    }
 
     .container-about {
         flex-direction: column;
@@ -1271,7 +1277,7 @@ nav a.active::after {
     }
 
     /* Featured Works */
-    .selected {
+    .featured-header h2 {
         font-size: 3rem;
     }
 
@@ -1303,6 +1309,10 @@ nav a.active::after {
     }
 
     /* Expertises */
+    .expertise {
+        padding-top: 10rem;
+    }
+
     .container-expertise {
         flex-direction: column;
     }
@@ -1327,19 +1337,30 @@ nav a.active::after {
     }
 
     .service-card {
+        pointer-events: none;
         width: 100%;
+        height: 15rem;
     }
 
     /* CTA */
-    .cta2 {
-        font-size: 7rem;
+    .collaborate {
+        padding-bottom: 8rem;
     }
 
-    .contact-me {
+    .collaborate-container h2 {
+        font-size: 8rem;
+    }
+
+    .collaborate-container p {
+        font-size: 1.2rem;
+    }
+
+    .collaborate-container a {
         font-size: 1.2rem;
     }
 
     /* Footer */
+
 
     .social-links {
         flex-direction: column;
@@ -1476,17 +1497,8 @@ nav a.active::after {
 }
 
 @media (max-width: 480px) {
+    
     /* Mobile */
-
-    body {
-        margin: 0 1rem; /* ou qualquer valor que queiras */
-      }
-
-    /* Navbar */
-    nav {
-        margin: 0 1.85rem;
-    }
-
     .logo {
         font-size: 1rem;
     }
@@ -1510,6 +1522,11 @@ nav a.active::after {
     }
 
     /* Intro */
+    .intro {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
     .container-about{
         display: flex;
         flex-direction: column;
@@ -1519,7 +1536,7 @@ nav a.active::after {
     }
 
     /* Featured Works */
-    .selected {
+    .featured-header h2 {
         font-size: 2rem;
     }
 
@@ -1551,6 +1568,10 @@ nav a.active::after {
     }
 
     /* Expertises */
+    .expertise {
+        padding-top: 7rem;
+    }
+
 
     .expertise-text h2 {
         font-size: 2rem;
@@ -1567,19 +1588,29 @@ nav a.active::after {
     }
 
     .service-card {
+        pointer-events: none;
         width: 100%;
+        height: 10rem;
+    }
+
+    .service-card p {
+        font-size: 1.12rem;
     }
 
     /* CTA */
-    .cta2 {
+    .collaborate {
+        padding-top: 3rem;
+    }
+
+    .collaborate-container h2 {
         font-size: 5.5rem;
     }
 
-    .cta3 {
+    .collaborate-container p {
         width: 70%;
     }
 
-    .contact-me {
+    .collaborate-container a {
         font-size: 1.2rem;
     }
 
