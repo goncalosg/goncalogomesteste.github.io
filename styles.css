@@ -1344,7 +1344,7 @@ nav a.active::after {
 
     /* CTA */
     .collaborate {
-        padding-bottom: 8rem;
+        padding-bottom: 10rem;
     }
 
     .collaborate-container h2 {
@@ -1360,8 +1360,6 @@ nav a.active::after {
     }
 
     /* Footer */
-
-
     .social-links {
         flex-direction: column;
         gap: 0.5rem;
@@ -1388,12 +1386,22 @@ nav a.active::after {
     }
 
     .img-tablet {
-        width: 48%;
-        padding-bottom: 5rem;
+        width: 49%;
+        padding-bottom: 3rem;
     }
 
     .img-tablet img {
-        height: 30rem;
+        height: 42rem;
+    }
+
+    .img-tablet h3 {
+        font-size: 1.3rem;
+        padding-bottom: 0.1rem;
+    }
+
+    .img-tablet p {
+        font-size: 1rem;
+        opacity: 75%;
     }
 
     /* PROJECT PAGE */
@@ -1441,6 +1449,10 @@ nav a.active::after {
         width: 100%;
     }
 
+    .about-data h1 {
+        font-size: 5rem;
+    }
+
     .about-data p {
         width: 100%;
         padding-top: 1rem;
@@ -1475,6 +1487,14 @@ nav a.active::after {
         font-size: 3rem;
       }
       
+      .work-experience {
+        padding-top: 2rem;
+      }
+
+      .work-experience2 {
+        padding-top: 2rem;
+      }
+
       .work-text h2 {
         font-size: 2rem;
       }
@@ -1492,7 +1512,7 @@ nav a.active::after {
       }
 
       .work-experience2 {
-        margin-bottom: 5rem;
+        margin-bottom: 1rem;
       }
 }
 
@@ -1600,6 +1620,7 @@ nav a.active::after {
     /* CTA */
     .collaborate {
         padding-top: 3rem;
+        padding-bottom: 8rem;
     }
 
     .collaborate-container h2 {
@@ -1642,7 +1663,6 @@ nav a.active::after {
     .allworks-section {
         padding-bottom: 3rem;
     }
-
 
     .allworks-container h2 {
         font-size: 3rem;
@@ -1720,8 +1740,12 @@ nav a.active::after {
         width: 100%;
     }
 
+    .about-data h1 {
+        font-size: 3rem;
+    }
+
     .about-data p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         padding-top: 1rem;
         padding-bottom: 0rem;
     }
@@ -1771,7 +1795,7 @@ nav a.active::after {
       }
 
       .work-experience2 {
-        margin-bottom: 5rem;
+        margin-bottom: 1rem;
         padding-top: 1rem;
       }
 }
