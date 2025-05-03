@@ -948,7 +948,7 @@ nav a.active::after {
 }
 
 .nextworks {
-    margin-top: 10rem;
+    margin-top: 5rem;
     width: 93%;
     display: flex;
     margin-bottom: 2rem;
@@ -981,20 +981,31 @@ nav a.active::after {
     transform: scale(1.1);
 }
 
+.nextproject {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .nextworks {
     display: flex;
+    justify-content: space-between;
+    width: 93%;
+    height: 20rem;
+}
+
+.next {
+    display: flex;
     flex-direction: column;
-    gap: 5rem;
-    padding-bottom: 10rem;
 }
 
 .nextworks p {
     font-family: "fontmedium";
-    font-size: 4rem;
+    font-size: 1.8rem;
 }
 
 .nextprojects_list{
-    gap: 10rem;
     width: 100%;
     list-style: none;
     text-decoration: none;
@@ -1002,8 +1013,9 @@ nav a.active::after {
 }
 
 .nexttext_container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    align-items: flex-end;
     gap: 0.5rem; /* espaçamento entre h3 e p */
 }
 
@@ -1023,7 +1035,7 @@ nav a.active::after {
     height: 9rem;
     align-items: center;
     justify-content: start;
-    width: 15rem;
+    width: 100%;
     gap: 10rem;
     text-decoration: none;
     padding: 2rem 0;
@@ -1259,6 +1271,14 @@ nav a.active::after {
 
 @media (max-width: 1024px) {
     /* TABLET */
+
+    .hero_container h1 {
+        font-size: 2rem;
+    }
+
+    .from {
+        font-size: 2rem;
+    }
 
     /* Intro */
     .intro {
