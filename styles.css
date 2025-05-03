@@ -152,15 +152,12 @@ h3 {
 }
 
 .from {
-    text-transform: uppercase;
     text-align: right;
-    font-size: 1rem;
+    font-size: 1.12rem;
 }
 
 h1 span {
-    display: block;
-    font-size: 1rem;
-    text-transform: uppercase;
+    font-size: 1.12rem;
 }
 
 .myname {
@@ -178,7 +175,6 @@ h1 span {
 
 /* Intro Section */
 .intro {
-    background-color: #f8f8f8;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -192,21 +188,20 @@ h1 span {
     justify-content: space-between;
     align-items: flex-start;
     width: 93%;
+    height: 28.9rem;
 }
 
 .intro-text {
     width: 55%;
-    text-align: left;
+    height: 100%;
     display: flex;
+    flex-direction: column;
 }
 
 .intro-text h2 {
-    font-family: "fontbook";
+    font-family: "fontmedium";
     font-size: 1.2rem;
-    font-weight: medium;
-    line-height: 1.1;
-    width: 100%;
-    padding-top: 1rem;
+    margin-top: auto;
 }
 
 .intro-description {
@@ -215,15 +210,8 @@ h1 span {
 
 .intro-description p {
     font-family: "fontmedium";
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 400;
-}
-
-.intro-description a p {
-    font-family: "fontmedium";
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #171718;
 }
 
 /* Featured Works */
@@ -242,7 +230,7 @@ h1 span {
     padding-bottom: 3rem;
 }
 
-.selected {
+.featured-header h2 {
     font-family: "fontmedium";
     font-size: 5rem;
     font-weight: 500;
@@ -253,7 +241,7 @@ h1 span {
     padding-top: 3.5rem;
 }
 
-.see-more-link {
+.see-more-container a {
     font-family: "fontmedium";
     font-size: 1.12rem;
     text-decoration: none;
@@ -261,7 +249,7 @@ h1 span {
     position: relative;
 }
 
-.see-more-link::after {
+.see-more-container a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -274,7 +262,7 @@ h1 span {
     transition: transform 0.3s ease;
 }
 
-.see-more-link:hover::after {
+.see-more-container a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -345,28 +333,18 @@ h1 span {
     margin-top: 1rem;
 }
   
-  .img-wrapper:hover .hover-text {
+.img-wrapper:hover .hover-text {
     opacity: 1;
-  }
-
-.see-more {
-    font-family: "fontmedium";
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding-top: 2.5rem;
-    width: 93%;
 }
 
 /* Expertise Section */
-
 .expertise {
-    pointer-events: none;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding-top: 15rem;
-    padding-bottom: 22rem;
+    padding-bottom: 10rem;
 }
 
 .container-expertise {
@@ -374,24 +352,24 @@ h1 span {
     justify-content: space-between;
     align-items: flex-start;
     width: 93%;
-    padding-top: 1.2rem;
 }
 
 .expertise-text {
     text-align: left;
-    width: 30%;
+    width: 25%;
 }
 
 .experience-text h2 {
     font-family: "fontmedium";
     font-size: 5rem;
     font-weight: medium;
-    line-height: 1.1;
 }
 
 .expertise-text p {
-    font-family: "fontbook";
-    font-size: 1.2rem;
+    font-family: "fontmedium";
+    font-size: 1.12rem;
+    font-weight: 300;
+    opacity: 85%;
     padding-top: 2rem;
 }
   
@@ -415,7 +393,6 @@ h1 span {
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
-    z-index: 10;
 }
 
 .service-card img {
@@ -433,32 +410,29 @@ h1 span {
     opacity: 1; 
 }
   
-  .service-title {
+  .service-card h3 {
     font-size: 1.12rem;
     font-family: "fontbook";
-    font-weight: bold;
-    text-transform: uppercase;
     color: #171718;
     position: absolute;
     top: 1.5rem;
     left: 1.5rem;
 }
   
-  .service-desc {
+  .service-card p {
     font-family: "fontmedium";
-    font-size: 2rem;
-    line-height: 1.6;
+    font-size: 1.5rem;
     color: #171718;
     position: relative;
 }
 
 /* Collaborate Section */
 .collaborate {
-    background-color: #f8f8f8;
     width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 16rem;
+    padding-top: 8rem;
 }
 
 .collaborate-container {
@@ -469,24 +443,25 @@ h1 span {
     gap: 5rem;
 }
 
-.cta2 {
+.collaborate-container h2 {
     font-family: "fontmedium";
     font-size: 12rem;
     font-weight: 500;
+    text-decoration: none;
 }
 
-.cta3 {
-    width: 100%;
-    font-family: "fontbook";
+.collaborate-container p {
+    font-family: "fontmedium";
     font-size: 1.12rem;
+    opacity: 85%;
     position: relative;
     padding-bottom: 1rem;
 }
 
-.contact-me {
+.collaborate-container a {
+    color: #171718;
     font-family: "fontmedium";
     font-size: 1.12rem;
-    color: #171718;
     text-decoration: none;
     position: relative;
     display: inline-flex;  
@@ -495,7 +470,7 @@ h1 span {
     padding-bottom: 0.3rem;
 }
 
-.contact-me::after {
+.collaborate-container a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -508,7 +483,7 @@ h1 span {
     transition: transform 0.3s ease;
 }
 
-.contact-me:hover::after {
+.collaborate-container a:hover::after {
     transform: scaleX(1);
     transform-origin: left center;
 }
@@ -519,7 +494,6 @@ h1 span {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: #f8f8f8;
 }
 
 .footer-container {
@@ -530,28 +504,21 @@ h1 span {
 }
 
 .footer-left {
+    color: #171718;
     display: flex;
     flex-direction: column;
 }
 
-.footer-title {
+.footer-left p {
     font-family: "fontmedium";
     font-size: 1.12rem;
-    font-weight: bold;
-    opacity: 0;
-}
-
-.footer-rights {
-    font-family: "fontmedium";
-    font-size: 1.12rem;
-    font-weight: 400;
+    font-weight: 100;
 }
 
 .footer-right {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    
 }
 
 .social-links {
@@ -589,40 +556,32 @@ h1 span {
     transform-origin: left center;
 }
 
-.footer-dev {
-    font-family: "fontmedium";
-    font-size: 1.12rem;
-    opacity: 0;
-}
-
 /* Página WORKS */
 
-/* Works */
-
+/* Works title */
 .allworks-section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-top: 9rem;
     padding-bottom: 5rem;
-  }
+}
 
-  .allworks-container {
+.allworks-container {
     width: 93%;
     display: flex;
     justify-content: space-between;
-    align-items: end;
-  }
+}
 
-  .allworks {
+.allworks-container h2 {
     font-family: "fontmedium";
     font-size: 8rem;
     font-weight: 400;
     line-height: 1.1;
 }
 
+/* Works title */
 .projects_section {
     width: 100%;
     display: flex;
@@ -790,13 +749,14 @@ h1 span {
   }
   
   .project-title {
-    width: 30%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   
   .project-title h1 {
+    font-family: "fontmedium";
     font-size: 4rem;
     font-weight: 500;
   }
@@ -816,7 +776,6 @@ h1 span {
     margin-bottom: 2.5rem;
     line-height: 1.6;
     font-family: "fontmedium";
-    opacity: 85%;
     font-size: 1.5rem;
   }
   
@@ -834,7 +793,6 @@ h1 span {
   }
   
   .project-meta-item dd {
-    font-weight: 400;
     font-size: 1.2rem;
     font-family: "fontbook";
   }
@@ -871,8 +829,8 @@ h1 span {
     padding-top: 1.2rem;
 }
 
-.casestudy-about {
-    font-family: "fontmedium";
+.casestudy-text h2 {
+        font-family: "fontmedium";
     font-size: 4rem;
     font-weight: medium;
     line-height: 1.1;
@@ -884,14 +842,14 @@ h1 span {
     flex-direction: column;
 }
   
-  .casestudy-grid {
+.casestudy-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     justify-items: end;
 }
   
-  .casestudy-card {
+.casestudy-card {
     position: relative;
     padding: 1.5rem;
     background-color: #272523;
@@ -902,27 +860,23 @@ h1 span {
     justify-content: flex-end;
 }
   
-  .casestudy-title {
+.casestudy-card h3 {
     font-size: 1.12rem;
     font-family: "fontbook";
-    font-weight: bold;
     color: #f8f8f8;
     position: absolute;
     top: 1.5rem;
     left: 1.5rem;
-    z-index: 0;
-    opacity: 1;
     pointer-events: none;
     line-height: 1;
 }
   
-  .casestudy-desc {
+.casestudy-card p {
     font-family: "fontmedium";
     font-size: 1.5rem;
     line-height: 1.6;
     color: #f8f8f8;
     position: relative;
-    z-index: 1;
 }
   
 .casestudy-card2 {
@@ -968,11 +922,10 @@ h1 span {
     border-bottom: solid #9E9E9E;
 }
 
-.font-about {
-    font-family: "fontbook";
-    font-size: 2rem;
+.font-title h2 {
+    font-family: "fontmedium";
+    font-size: 1.5rem;
     font-weight: 400;
-    opacity: 1;
     color: #171718;
     padding-bottom: 0.5rem;
 }
@@ -990,9 +943,9 @@ h1 span {
     height: 46rem;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-  }
+}
   
-  .projectimg-wrapper img {
+.projectimg-wrapper img {
     width: 100%;
     height: 100%;
     display: block;
@@ -1000,9 +953,9 @@ h1 span {
     object-position: center;
     transition: transform 0.5s ease;
     z-index: 1;
-  }
+}
 
-  .projectimg-wrapper:hover img {
+.projectimg-wrapper:hover img {
     transform: scale(1.05);
 }
 
@@ -1011,9 +964,9 @@ h1 span {
     width: 93%;
     display: flex;
     margin-bottom: 2rem;
-  }
+}
 
-  .img-nextwork {
+.img-nextwork {
     width: 100%;
     height: 40rem;
     display: flex;
@@ -1022,51 +975,109 @@ h1 span {
     overflow: hidden;
     position: relative;
     transition: transform 0.5s ease-in-out;
-  }
+}
 
-  .img-nextwork:hover {
+.img-nextwork:hover {
     transform: scale(0.97);
-  }
+}
   
-  .img-nextwork img {
+.img-nextwork img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(0.5);
     transition: transform 0.5s ease-in-out;
-  }
-
-  .img-nextwork:hover img {
-    transform: scale(1.1);
-  }
-
-  .nextproject {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 80%;
-    font-family: "fontbook";
-    color: #f8f8f8;
-    font-size: 1.12rem;
-    z-index: 2;
-    white-space: nowrap; /* evita quebra em múltiplas linhas, opcional */
-  }
-
-  .nextprojectname {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* centraliza completamente */
-    font-family: "fontmedium";
-    color: #f8f8f8;
-    font-size: 6rem;
-    z-index: 2;
-    white-space: nowrap; /* evita quebra em múltiplas linhas, opcional */
 }
 
-  /* ABOUT PAGE */
+.img-nextwork:hover img {
+    transform: scale(1.1);
+}
 
+.nextworks {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-bottom: 10rem;
+}
+
+.nextworks p {
+    font-family: "fontmedium";
+    font-size: 4rem;
+}
+
+.nextprojects_list{
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+}
+
+.nexttext_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* espaçamento entre h3 e p */
+}
+
+.nextprojects_list h3 {
+    font-family: "fontmedium";
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.nextprojects_list p {
+    font-family: "fontmedium";
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.1;
+    opacity: 75%;
+}
+
+.nextprojects_list li a{
+    display: flex;
+    height: 9rem;
+    align-items: center;
+    justify-content: start;
+    width: 15rem;
+    gap: 10rem;
+    text-decoration: none;
+    padding: 2rem 0;
+    position: relative;
+    transition: all 0.1s ease;
+}
+
+.nextprojects_list .img_container{
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 25%;
+    transform-origin: center;
+    transform: translate(0%, -50%) scale(0.8);
+    height: 15.25rem;
+    width: 15.25rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nextprojects_list li a:hover .img_container{
+    opacity: 1;
+    transform: translate(0%, -50%) scale(1);
+}
+
+.nextprojects_list .img_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nextprojects_list li a,
+.nextprojects_list li a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ABOUT PAGE */
 .hero-about {
     width: 100%;
     display: flex;
@@ -1105,51 +1116,21 @@ h1 span {
     padding-bottom: 1.5rem;
   }
 
-  .h1-about {
+  .about-data h1 {
     font-family: "fontmedium";
     font-size: 13vw;
     font-weight: 400;
     line-height: 1.1;
   }
 
-  .p-about {
-    font-family: "fontbook";
+  .about-data p {
+    font-family: "fontmedium";
     font-size: 1.12rem;
     font-weight: 400;
     width: 60%;
     padding-bottom: 2rem;
+    opacity: 85%;
   }
-
-  .contact-me2 {
-    font-family: "fontmedium";
-    font-size: 0.87rem;
-    color: #171718;
-    font-weight: 400;
-    text-decoration: none;
-    position: relative;
-    display: inline-flex;  
-    align-items: center;
-    gap: 0.3rem;
-    padding-bottom: 0.3rem;
-}
-
-.contact-me2::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0.12rem;  
-    width: 100%;
-    height: 0.12rem; 
-    background-color: #171718;
-    transform: scaleX(0);
-    transform-origin: right center;
-    transition: transform 0.3s ease;
-}
-
-.contact-me2:hover::after {
-    transform: scaleX(1);
-    transform-origin: left center;
-}
 
   .social-links-about {
     padding-top: 2rem;
@@ -1160,10 +1141,9 @@ h1 span {
 }
 
 .social-links-about a {
-    text-transform: uppercase;
     color: #171718;
     font-family: "fontmedium";
-    font-size: 0.87rem;
+    font-size: 1.12rem;
     padding-bottom: 0.3rem;
     position: relative;
     gap: 0.3rem;
@@ -1244,11 +1224,10 @@ h1 span {
     border-bottom: solid #9E9E9E;
 }
 
-.work-about {
-    font-family: "fontbook";
-    font-size: 2.5rem;
-    font-weight: 400;
-    opacity: 85%;
+.work-text h2 {
+    font-family: "fontmedium";
+    font-size: 2rem;
+    font-weight: 300;
     padding-bottom: 0.5rem;
 }
 
