@@ -968,6 +968,7 @@ nav a.active::after {
     justify-content: center;
     align-items: flex-start;
     margin-top: 5rem;
+    margin-bottom: 2rem;
 }
 
 .nextworks {
@@ -981,6 +982,7 @@ nav a.active::after {
     width: 50%;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .nextworks p {
@@ -1004,7 +1006,7 @@ nav a.active::after {
 
 .nextprojects_list h3 {
     font-family: "fontmedium";
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .nextprojects_list p {
@@ -1013,7 +1015,7 @@ nav a.active::after {
     opacity: 75%;
 }
 
-.nextprojects_list li a{
+.nextprojects_list li a {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -1021,29 +1023,28 @@ nav a.active::after {
     justify-content: space-between;
     width: 100%;
     text-decoration: none;
-    position: relative;
     transition: all 0.1s ease;
 }
 
-.nextprojects_list .img_container{
+.img_container {
     position: absolute;
     z-index: 999;
-    top: -35%;
-    left: 35%;
+    top: 40%;
+    left: 55%;
     transform-origin: center;
     transform: translate(0%, -50%) scale(0.8);
     height: 15.25rem;
-    width: 15.25rem;
+    width: 22.25rem;
     opacity: 0;
     transition: all 0.3s ease;
 }
 
-.nextprojects_list li a:hover .img_container{
+.nextprojects_list li a:hover .img_container {
     opacity: 1;
     transform: translate(0%, -50%) scale(1);
 }
 
-.nextprojects_list .img_container img{
+.nextprojects_list .img_container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1056,10 +1057,14 @@ nav a.active::after {
     justify-content: space-between;
     align-items: flex-end;
   }
+
+  .container2 p {
+    font-size: 1.12rem;
+  }
   
   .container2 a {
       color: #0E0E0E;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       position: relative;
       transition: color 0.3s ease-in-out;
   }
@@ -1288,11 +1293,11 @@ nav a.active::after {
     /* TABLET */
 
     .hero_container h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .from {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     /* Intro */
@@ -1445,12 +1450,16 @@ nav a.active::after {
     }
 
     .project-title h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .project-description p {
         padding-top: 1rem;
         font-size: 1.5rem;
+    }
+
+    .case-study {
+        padding-top: 5rem;
     }
 
     .case-study-container {
@@ -1473,6 +1482,28 @@ nav a.active::after {
 
     .projectimg-wrapper {
         height: 30rem;
+    }
+
+    .img_container {
+        opacity: 1;
+        transform: translate(0%, -50%) scale(1);
+        margin-top: 2rem;
+        height: 12.25rem;
+        width: 16.25rem;
+        left: 0%;
+    }
+
+    .nexttext_container h3 {
+        font-size: 1.3rem;
+    }
+
+    .nexttext_container p {
+        font-size: 1rem;
+    }
+
+
+    .container2 p {
+        font-size: 0.7rem;
     }
 
     /* ABOUT PAGE */
@@ -1724,7 +1755,7 @@ nav a.active::after {
     }
 
     .project-title h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .project-description p {
@@ -1770,6 +1801,60 @@ nav a.active::after {
         flex-direction: column;
     }
 
+    .nextproject {
+        margin-top: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .nextworks {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nexttext_container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nexttext_container p {
+        font-size: 1rem;
+    }
+
+    .img_container {
+        position: relative;
+        opacity: 1;
+        transform: none;
+        margin-top: 2rem;
+        height: 18.25rem;
+        width: 100%;
+        left: 0%;
+      }
+      
+      .img_container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    .container2 {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+
+    .container2 p {
+        display: none;
+    }
     /* ABOUT PAGE */
     .about-data {
         width: 100%;
