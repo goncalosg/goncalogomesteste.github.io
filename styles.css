@@ -6,13 +6,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'fontbook';
-    src: url('./fonts/PPNeueMontreal-Book.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Base Styles */
 * {
     margin: 0;
@@ -22,8 +15,8 @@
 
 body {
     font-family: "fontmedium";
-    background: #f8f8f8;
-    color: #171718;
+    background: #E9E9E9;
+    color: #0E0E0E;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -757,14 +750,35 @@ nav a.active::after {
     display: flex;
     align-items: flex-end;
     gap: 4rem;
+    justify-content: space-between;
   }
 
   .project-something a p {
     color: #171718;
-    font-size: 1.2rem;
+    font-size: 1.12rem;
     text-decoration: none;
     margin: auto;
+    position: relative;
+    transition: color 0.3s ease-in-out;
   }
+
+  .project-something a p::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.12rem;  
+    width: 100%;
+    height: 0.12rem;  
+    background-color: #171718;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.3s ease;
+}
+
+.project-something a p:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
 
   .project-meta {
     display: flex;
@@ -947,57 +961,26 @@ nav a.active::after {
     transform: scale(1.05);
 }
 
-.nextworks {
-    margin-top: 5rem;
-    width: 93%;
-    display: flex;
-    margin-bottom: 2rem;
-}
-
-.img-nextwork {
-    width: 100%;
-    height: 40rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.5s ease-in-out;
-}
-
-.img-nextwork:hover {
-    transform: scale(0.97);
-}
-  
-.img-nextwork img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.5);
-    transition: transform 0.5s ease-in-out;
-}
-
-.img-nextwork:hover img {
-    transform: scale(1.1);
-}
-
+/* Next Project */
 .nextproject {
-    width: 100%;
+    width: 93%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 5rem;
 }
 
 .nextworks {
     display: flex;
-    justify-content: space-between;
-    width: 93%;
+    width: 100%;
     height: 20rem;
 }
 
-.next {
+.container {
     display: flex;
+    width: 50%;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .nextworks p {
@@ -1009,14 +992,14 @@ nav a.active::after {
     width: 100%;
     list-style: none;
     text-decoration: none;
-    display: flex;
+    flex-direction: column;
 }
 
 .nexttext_container {
     width: 100%;
     display: flex;
     align-items: flex-end;
-    gap: 0.5rem; /* espaçamento entre h3 e p */
+    justify-content: space-between;
 }
 
 .nextprojects_list h3 {
@@ -1032,13 +1015,12 @@ nav a.active::after {
 
 .nextprojects_list li a{
     display: flex;
-    height: 9rem;
-    align-items: center;
-    justify-content: start;
+    flex-direction: column;
+    height: 100%;
+    align-items: stretch;
+    justify-content: space-between;
     width: 100%;
-    gap: 10rem;
     text-decoration: none;
-    padding: 2rem 0;
     position: relative;
     transition: all 0.1s ease;
 }
@@ -1046,8 +1028,8 @@ nav a.active::after {
 .nextprojects_list .img_container{
     position: absolute;
     z-index: 999;
-    top: 50%;
-    left: 62%;
+    top: -35%;
+    left: 35%;
     transform-origin: center;
     transform: translate(0%, -50%) scale(0.8);
     height: 15.25rem;
@@ -1066,6 +1048,39 @@ nav a.active::after {
     height: 100%;
     object-fit: cover;
 }
+
+.container2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .container2 a {
+      color: #0E0E0E;
+      font-size: 1.8rem;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+  }
+  
+  .container2 a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0.1rem;  
+      width: 100%;
+      height: 0.12rem;  
+      background-color: #171718;
+      transform: scaleX(0);
+      transform-origin: right center;
+      transition: transform 0.3s ease;
+  }
+  
+  .container2 a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left center;
+  }
 
 .nextprojects_list li a,
 .nextprojects_list li a:visited {
