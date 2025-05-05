@@ -19,7 +19,6 @@ body {
     color: #0E0E0E;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 100vh;
 }
 
@@ -29,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 /* HOME PAGE */
@@ -38,7 +38,6 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
-    align-items: center;
     padding-top: 1.72rem;
     position: fixed;
     top: 0;
@@ -55,23 +54,19 @@ nav {
 }
 
 .logo {
-    font-family: "fontmedium";
     font-size: 1.12rem;
 }
 
 nav ul {
     display: flex;
-    font-family: "fontmedium";
     font-size: 1.12rem;
     list-style: none;
-    display: flex;
     gap: 1.5rem;
     color:white;
 }
 
 nav a {
     position: relative;
-    padding: 0;
     color: white;
 }
 
@@ -90,7 +85,6 @@ nav a::after {
 
 nav a:hover::after {
     transform: scaleX(1);
-    opacity: 1;
 }
 
 nav a:not(:hover)::after {
@@ -102,7 +96,7 @@ nav a.active::after {
     content: "";
     position: absolute;
     left: 0;
-    top: 50%; /* meio vertical do texto */
+    top: 50%;
     width: 100%;
     height: 1.5px;
     background-color: white;
@@ -112,7 +106,6 @@ nav a.active::after {
 
 /* Hero Section */
 .hero {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,11 +128,9 @@ nav a.active::after {
 
 .from {
     text-align: right;
-    font-size: 1.2rem;
 }
 
 .myname {
-    font-family: "fontmedium";
     text-align: center;
     font-size: 11vw;
     padding-bottom: 2rem;
@@ -155,17 +146,13 @@ nav a.active::after {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 15rem;
-    padding-bottom: 18rem;
+    padding: 15rem 0 18rem;
 }
 
 .container-about {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     width: 93%;
-    align-items: stretch;
 }
 
 .intro-text {
@@ -175,7 +162,6 @@ nav a.active::after {
 }
 
 .intro-text h2 {
-    font-family: "fontmedium";
     font-size: 1.2rem;
     margin-top: auto;
     opacity: 75%;
@@ -186,9 +172,7 @@ nav a.active::after {
 }
 
 .intro-description p {
-    font-family: "fontmedium";
     font-size: 3.5rem;
-    font-weight: 400;
 }
 
 /* Featured Works */
@@ -203,26 +187,19 @@ nav a.active::after {
     width: 93%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; 
     padding-bottom: 3rem;
 }
 
 .featured-header h2 {
-    font-family: "fontmedium";
     font-size: 5rem;
-    font-weight: 500;
 }
 
 .see-more-container {
-    display: flex;
     padding-top: 3.5rem;
 }
 
 .see-more-container a {
-    font-family: "fontmedium";
     font-size: 1.12rem;
-    text-decoration: none;
-    color: #171718;
     position: relative;
 }
 
@@ -257,115 +234,95 @@ nav a.active::after {
     height: 46rem;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
-  }
+}
   
-  .img-wrapper img {
+.img-wrapper img {
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
-    object-position: center;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1;
     filter: brightness(0.9);
-  }
-  
-  .project-type {
-    font-family: "fontmedium";
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
-    color: #f8f8f8;
-    font-size: 1.12rem;
-    z-index: 2;
-  }
-
-  .project-name {
-    font-family: "fontmedium";
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    color: #f8f8f8;
-    font-size: 1.12rem;
-    z-index: 3;
 }
-
+  
 /* Efeito hover zoom */
 .img-wrapper:hover img {
-   transform: scale(1.05);
+    transform: scale(1.05);
     opacity: 90%;
 }
 
+.project-type,
+.project-name,
 .hover-text {
     position: absolute;
-    font-family: "fontmedium";
     color: #f8f8f8;
+    font-size: 1.12rem;
+    font-family: 'fontmedium';
+    z-index: 2;
+}
+
+.project-type {
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.project-name {
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+
+.hover-text {
     font-size: 1.5rem;
-    transform: translate(-50%, -50%);
     opacity: 0;
     top: 50%;
     left: 50%;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    text-align: right;
-    margin-top: 1rem;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
 }
-  
+
 .img-wrapper:hover .hover-text {
     opacity: 1;
 }
 
 /* Expertise Section */
 .expertise {
-    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 15rem;
-    padding-bottom: 5rem;
+    padding: 15rem 0 5rem;
+    width: 100%;
 }
 
 .container-expertise {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     width: 93%;
 }
 
 .expertise-text {
-    text-align: left;
     width: 25%;
 }
 
 .expertise-text h2 {
-    font-family: "fontmedium";
     font-size: 5rem;
-    font-weight: medium;
 }
 
 .expertise-text p {
-    font-family: "fontmedium";
     font-size: 1.12rem;
-    font-weight: 300;
     opacity: 75%;
     padding-top: 2rem;
 }
   
-  .services-grid {
+.services-grid {
     width: 60%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    justify-items: end;
 }
   
-  .service-card {
+.service-card {
     position: relative;
     padding: 1.5rem;
-    border-color: #9E9E9E;
-    border-width: 0.05rem;
-    border-style: solid;
+    border: 0.05rem solid #9E9E9E;
     height: 20rem;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -387,19 +344,16 @@ nav a.active::after {
     opacity: 1; 
 }
   
-  .service-card h3 {
+.service-card h3 {
     font-size: 1.12rem;
-    color: #171718;
     position: absolute;
     top: 1.5rem;
     left: 1.5rem;
     opacity: 75%;
 }
   
-  .service-card p {
-    font-family: "fontmedium";
+.service-card p {
     font-size: 1.5rem;
-    color: #171718;
     position: relative;
 }
 
@@ -414,33 +368,22 @@ nav a.active::after {
 
 .collaborate-container {
     width: 93%;
-    display: inline;
-    justify-content: space-between;
-    align-items: flex-end;
 }
 
 .collaborate-container h2 {
-    font-family: "fontmedium";
     font-size: 12rem;
-    text-decoration: none;
 }
 
 .collaborate-container p {
-    font-family: "fontmedium";
     font-size: 1.12rem;
     opacity: 75%;
-    position: relative;
     padding-bottom: 1rem;
 }
 
 .collaborate-container a {
-    color: #171718;
-    font-family: "fontmedium";
     font-size: 1.12rem;
-    text-decoration: none;
     position: relative;
     display: inline-flex;  
-    align-items: center;
     gap: 0.3rem;
     padding-bottom: 0.3rem;
 }
