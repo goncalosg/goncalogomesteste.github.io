@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'general';
-    src: url('./fonts/GeneralSans-Regular.otf') format('truetype');
+    src: url('./fonts/TT\ Hoves\ Pro\ Trial\ Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -62,7 +62,6 @@ nav {
 
 .logo {
     font-size: 1.12rem;
-    font-weight: 700;
 }
 
 nav ul {
@@ -166,12 +165,10 @@ nav a.active::after {
 .intro-text {
     width: 55%;
     display: flex;
-    flex-direction: column;
 }
 
 .intro-text h2 {
     font-size: 1.2rem;
-    margin-top: auto;
     opacity: 75%;
 }
 
@@ -180,7 +177,7 @@ nav a.active::after {
 }
 
 .intro-description p {
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 /* Featured Works */
@@ -1381,6 +1378,7 @@ nav a.active::after {
 
     .tabletwork {
         display: flex;
+        flex-direction: column;
     }
 
     .tablet-container {
