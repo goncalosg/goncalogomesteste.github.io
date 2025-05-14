@@ -49,7 +49,7 @@ span {
     padding-left: 0.5rem;
     display: inline-block;
     vertical-align: bottom;
-    line-height: 1;;
+    line-height: 1;
 }
 
 .span2 {
@@ -129,7 +129,7 @@ nav a:not(:hover)::after {
     transform-origin: right;
 }
 
-nav a.active::after {
+/* nav a.active::after {
     content: "";
     position: absolute;
     left: 0;
@@ -139,8 +139,12 @@ nav a.active::after {
     background-color: white;
     transform: translateY(-50%);
     opacity: 1;
-  }
+  } */
 
+nav a.active {
+    opacity: 50%;
+    pointer-events: none;
+}
 /* Hero Section */
 .hero {
     display: flex;
@@ -754,6 +758,7 @@ nav a.active::after {
     object-fit: cover;
   }
 
+  /* Project Details */
   .project-details2 {
     width: 93%;
     padding: 8rem 0;
@@ -781,22 +786,21 @@ nav a.active::after {
     font-size: 1.5rem;
     color: #171718
   }
+
+  .project-description h1 {
+    font-family: "fontmedium";
+    font-size: 4rem;
+    padding-bottom: 1rem;
+  }
   
   .project-description p {
     margin-bottom: 2.5rem;
     line-height: 1.6;
-    font-family: "fontmedium";
+    font-family: "fontregular";
     font-size: 1.5rem;
   }
-  
-  .project-something {
-    display: flex;
-    align-items: flex-end;
-    gap: 4rem;
-    justify-content: space-between;
-  }
 
-  .project-something a p {
+  .project-details2 a {
     color: #171718;
     font-size: 1.12rem;
     text-decoration: none;
@@ -805,58 +809,45 @@ nav a.active::after {
     transition: color 0.3s ease-in-out;
   }
 
-  .project-something a p::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0.12rem;  
-    width: 100%;
-    height: 0.12rem;  
-    background-color: #171718;
-    transform: scaleX(0);
-    transform-origin: right center;
-    transition: transform 0.3s ease;
-}
-
-.project-something a p:hover::after {
-    transform: scaleX(1);
-    transform-origin: left center;
-}
-
   .project-meta {
     display: flex;
-    gap: 4rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
   }
   
   .project-meta-item dt {
-    color: #171718;
     font-size: 1.2rem;
-    font-family: "fontmedium";
+    font-family: "fontregular";
     padding-bottom: 0.5rem;
+    opacity: 50%;
   }
   
   .project-meta-item dd {
     font-size: 1.2rem;
-    font-family: "fontmedium";
-    opacity: 75%;
+    font-family: "fontregular";
+  }
+
+  /* Project Image */
+  .first-image {
+    width: 93%;
   }
 
   .img-fullscreen {
-    width: 93%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding-bottom: 5rem;
   }
   
   .img-fullscreen img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: 54rem;
+    object-fit: cover;
   }
 
-  .case-study {
+ /* .case-study {
     pointer-events: none;
     width: 100%;
     display: flex;
@@ -973,7 +964,7 @@ nav a.active::after {
     font-weight: 400;
     color: #171718;
     padding-bottom: 0.5rem;
-}
+} */
 
 .project-image {
     width: 93%;
@@ -1000,9 +991,9 @@ nav a.active::after {
     z-index: 1;
 }
 
-.projectimg-wrapper:hover img {
+/* .projectimg-wrapper:hover img {
     transform: scale(1.05);
-}
+} */
 
 /* Next Project */
 .nextproject {
