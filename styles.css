@@ -761,35 +761,74 @@ nav a.active {
   /* Project Details */
   .project-details2 {
     width: 93%;
-    padding: 8rem 0;
+    padding-top: 4.5rem;
+    padding-bottom: 10rem;
     display: flex;
   }
   
-  .project-title {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .project-title h1 {
-    font-family: "fontmedium";
-    font-size: 4rem;
-  }
+.project-title {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+    gap: 2rem;
+}
 
-  .project-title p {
-    font-family: "fontmedium";
-  }
-  
+.project-meta {
+  display: flex;
+  flex-direction: column;
+    gap: 2rem;
+}
+
+.project-meta-item h3 {
+  font-size: 1.12rem;
+  font-family: "fontregular";
+  opacity: 0.5;
+  padding-bottom: 0.2rem;
+}
+
+.project-meta-item p {
+  font-size: 1.12rem;
+  font-family: "fontregular";
+  padding-bottom: 0.2rem;
+}
+
+.project-title a {
+  color: #171718;
+  font-size: 1.12rem;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  display: inline-block;
+  width: auto; /* garante que não fica full width */
+  max-width: max-content; /* força o tamanho do texto */
+}
+
+.project-title a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.15rem;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #171718;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.3s ease;
+}
+
+.project-title a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
   .project-description {
     width: 100%;
-    font-size: 1.5rem;
     color: #171718
   }
 
   .project-description h1 {
     font-family: "fontmedium";
-    font-size: 4rem;
+    font-size: 3.5rem;
     padding-bottom: 1rem;
   }
   
@@ -798,31 +837,6 @@ nav a.active {
     line-height: 1.6;
     font-family: "fontregular";
     font-size: 1.5rem;
-  }
-
-  .project-details2 a {
-    color: #171718;
-    font-size: 1.12rem;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
-
-  .project-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .project-meta-item dt {
-    font-size: 1.2rem;
-    font-family: "fontregular";
-    padding-bottom: 0.5rem;
-    opacity: 50%;
-  }
-  
-  .project-meta-item dd {
-    font-size: 1.2rem;
-    font-family: "fontregular";
   }
 
   /* Project Image */
@@ -1024,6 +1038,25 @@ nav a.active {
 .nextworks a {
     font-family: "fontregular";
     font-size: 1.5rem;
+      position: relative;
+}
+
+.nextworks a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.15rem;
+    width: 100%;
+    height: 0.11rem;
+    background-color: #171718;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nextworks a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .nextimage {
