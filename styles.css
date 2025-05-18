@@ -226,42 +226,67 @@ nav a.active {
     position: relative;
 }
 
-.intro-description a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.12rem;
-    width: 100%;
-    height: 0.12rem;
-    background-color: #171718;
+/* Animação de entrada (hover) */
+@keyframes underline-in {
+  0% {
     transform: scaleX(1);
     transform-origin: right;
-    transition: transform 0.3s ease;
+  }
+  50% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  50.01% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }
 
-/* Animação em hover */
-.intro-description a:hover::after {
-    animation: underline-loop 0.8s;
+/* Animação de saída (unhover) */
+@keyframes underline-out {
+  0% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50.01% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
 }
 
-/* Keyframes que fazem o efeito desaparecer e reaparecer */
-@keyframes underline-loop {
-    0% {
-        transform: scaleX(1);
-        transform-origin: right;
-    }
-    50% {
-        transform: scaleX(0);
-        transform-origin: right;
-    }
-    50.01% {
-        transform: scaleX(0);
-        transform-origin: left;
-    }
-    100% {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
+/* Por padrão, linha está estática */
+.intro-description a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.12rem;
+  width: 100%;
+  height: 0.12rem;
+  background-color: #171718;
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+/* Quando adicionamos classe hover */
+.intro-description a.animate-in::after {
+  animation: underline-in 0.8s forwards;
+}
+
+/* Quando retiramos hover */
+.intro-description a.animate-out::after {
+  animation: underline-out 0.8s forwards;
 }
 
 /* Featured Works */
@@ -803,8 +828,8 @@ nav a.active {
   transition: color 0.3s ease-in-out;
   position: relative;
   display: inline-block;
-  width: auto; /* garante que não fica full width */
-  max-width: max-content; /* força o tamanho do texto */
+  width: auto;
+  max-width: max-content;
 }
 
 .project-title a::after {
@@ -815,34 +840,58 @@ nav a.active {
   width: 100%;
   height: 0.1rem;
   background-color: #171718;
+  transform-origin: right;
   transform: scaleX(1);
-  transform-origin: right center;
-  transition: transform 0.3s ease;
 }
 
-/* Animação em hover */
-.project-title a:hover::after {
-    animation: underline-loop 0.8s;
+/* Animação de entrada (hover) */
+.project-title a.animate-in::after {
+  animation: underline-in 0.8s forwards;
 }
 
-/* Keyframes que fazem o efeito desaparecer e reaparecer */
-@keyframes underline-loop {
-    0% {
-        transform: scaleX(1);
-        transform-origin: right;
-    }
-    50% {
-        transform: scaleX(0);
-        transform-origin: right;
-    }
-    50.01% {
-        transform: scaleX(0);
-        transform-origin: left;
-    }
-    100% {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
+/* Animação de saída (tirar hover) */
+.project-title a.animate-out::after {
+  animation: underline-out 0.8s forwards;
+}
+
+/* Keyframes de entrada: direita → esquerda */
+@keyframes underline-in {
+  0% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  50.01% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* Keyframes de saída: esquerda → direita */
+@keyframes underline-out {
+  0% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50.01% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
 }
 
   .project-description {
