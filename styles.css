@@ -301,7 +301,7 @@ nav a.active {
     width: 93%;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
 }
 
 .featured-header h2 {
@@ -352,6 +352,7 @@ nav a.active {
     width: 100%;
     height: 40rem;
     overflow: hidden; /* corta a imagem só dentro deste bloco */
+    display: flex;
   }
   
   .image-container img {
@@ -359,7 +360,6 @@ nav a.active {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    filter: brightness(0.9);
     display: block;
   }
   
@@ -899,9 +899,9 @@ nav a.active {
     color: #171718
   }
 
-  .project-description h1 {
+  .project-description h2 {
     font-family: "fontmedium";
-    font-size: 3.5rem;
+    font-size: 3rem;
     padding-bottom: 1rem;
   }
   
@@ -1490,32 +1490,35 @@ nav a.active {
     }
 
     .tabletwork {
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    .tablet-container {
-        flex-direction: row;
-        flex-wrap: wrap;
+    .tablet-next {
+        display: flex;
     }
 
     .img-tablet {
-        width: 49%;
         padding-bottom: 3rem;
     }
 
+    .tablet-text {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .img-tablet img {
-        height: 42rem;
+        height: 35rem;
     }
 
     .img-tablet h3 {
-        font-size: 1.3rem;
-        padding-bottom: 0.1rem;
+        font-size: 1.5rem;
     }
 
     .img-tablet p {
-        font-size: 1rem;
-        opacity: 75%;
+        font-size: 1.5rem;
+        opacity: 50%;
     }
 
     /* PROJECT PAGE */
@@ -1684,31 +1687,52 @@ nav a.active {
     /* Intro */
     .intro {
         padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-bottom: 6rem;
     }
 
     .container-about{
         display: flex;
         flex-direction: column;
     }
+
+    .intro-text h2 {
+        font-size: 1.12rem;
+    }
+
     .intro-description p {
         font-size: 1.5rem;
     }
 
+    .intro-description a {
+        font-size: 1.5rem;
+    }
+
     /* Featured Works */
+    .featured-header {
+        padding-bottom: 1.5rem;
+    }
+
     .featured-header h2 {
         font-size: 2rem;
+    }
+
+    .see-more-container a {
+        font-size: 1rem;
     }
 
     .projects {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     }
 
     .project-name {
         bottom: 1.5rem;
-      }
+    }
 
+    .image-container {
+        height: auto;
+    }
     .projects .img-wrapper {
         width: 100%;
         height: auto;
@@ -1716,7 +1740,11 @@ nav a.active {
 
     .projects .img-wrapper img {
         width: 100%;
-        height: 25rem;
+        height: 20rem;
+    }
+
+    .project-info {
+    display: flex;
     }
 
     .img-wrapper:hover img {
@@ -1812,14 +1840,25 @@ nav a.active {
         display: flex;
     }
 
+    .tablet-next {
+        display: flex;
+    }
+
     .img-tablet {
         width: 100%;
         display: flex;
-        flex-direction: column;
     }
 
     .img-tablet img {
-        height: 30rem;
+        height: 20rem;
+    }
+
+    .img-tablet h3 {
+        font-size: 1.12rem;
+    }
+
+     .img-tablet p {
+        font-size: 1.12rem;
     }
 
     /* PROJECT PAGE */
