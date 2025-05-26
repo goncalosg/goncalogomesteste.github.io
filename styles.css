@@ -1288,7 +1288,60 @@ nav a.active {
     line-height: 1.1;
   }
 
-  .work-experience {
+.whatido {
+    pointer-events: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 15rem;
+}
+
+.container-whatido {
+    display: flex;
+    width: 93%;
+    padding-top: 1.2rem;
+}
+
+.whatido-text {
+    width: 100%;
+    text-align: left;
+}
+
+.whatido-text h2 {
+    font-family: "fontmedium";
+    font-size: 2rem;
+    font-weight: 300;
+    padding-top: 1rem;
+}
+
+.whatido-list {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: right;
+    justify-items: right;
+    border-top: solid #9E9E9E;
+}
+
+.whatidoo-list{
+    list-style: none;
+    width: 100%;
+}
+
+.whatido-descriptionnoborder p {
+    font-size: 1.5rem;
+}
+
+.whatido-descriptionnoborder {
+    display: flex;
+    width: 100%;
+    gap: 15rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.work-experience {
     pointer-events: none;
     width: 100%;
     display: flex;
