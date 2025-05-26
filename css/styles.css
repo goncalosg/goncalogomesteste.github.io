@@ -1,21 +1,14 @@
 /* Fonts */
 @font-face {
     font-family: 'fontmedium';
-    src: url('./fonts/PPNeueMontreal-Medium.otf') format('opentype');
+    src: url('../Assets/fonts/PPNeueMontreal-Medium.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'fontregular';
-    src: url('./fonts/PPNeueMontreal-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'geist';
-    src: url('./fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+    src: url('../Assets/fonts/PPNeueMontreal-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -932,6 +925,12 @@ nav a.active {
     object-fit: cover;
   }
 
+  .img-fullscreen2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
  /* .case-study {
     pointer-events: none;
     width: 100%;
@@ -1321,7 +1320,7 @@ nav a.active {
     width: 100%;
     justify-content: right;
     justify-items: right;
-    border-top: solid #9E9E9E;
+    border-top: solid rgba(14, 14, 14, 0.2);
 }
 
 .whatidoo-list{
@@ -1336,7 +1335,8 @@ nav a.active {
 .whatido-descriptionnoborder {
     display: flex;
     width: 100%;
-    gap: 15rem;
+    justify-content: space-between;
+    border-bottom: solid rgba(14, 14, 14, 0.2);
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
 }
@@ -1361,7 +1361,7 @@ nav a.active {
 .work-text {
     width: 100%;
     text-align: left;
-    border-bottom: solid #9E9E9E;
+    border-bottom: solid rgba(14, 14, 14, 0.2);
 }
 
 .work-text h2 {
