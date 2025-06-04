@@ -375,6 +375,35 @@ nav a.active {
   }
 
 /* Collaborate Section */
+#email_container {
+  position: relative;
+  display: inline-block;
+}
+
+button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.7rem;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+#email_container button 
+{
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+}
+
+#email {
+    font-family: "fontmedium";
+    font-size: 16vw;
+}
+
 .contact-block {
   width: 100%;
   display: flex;
@@ -399,17 +428,12 @@ nav a.active {
     padding: 0;
 }
 
-.collaborate-container h2 {
-    font-size: 16vw;
+.collaborate-container a {
+    font-size: 13.9vw;
     font-family: "fontmedium";
 }
 
-.collaborate-container p {
-    font-size: 1.12rem;
-    font-family: "fontregular";
-}
-
-.collaborate-container a {
+/* .collaborate-container a {
     font-size: 1.12rem;
     font-family: "fontregular";
     position: relative;
@@ -1247,8 +1271,8 @@ nav a.active {
     }
 
     /* CTA */
-    .collaborate-container h2 {
-        font-size: 16vw;
+    .collaborate-container a {
+        font-size: 13.9vw;
     }
 
     /* Footer */
@@ -1496,8 +1520,8 @@ nav a.active {
 
     /* CTA */
 
-    .collaborate-container h2 {
-        font-size: 16vw;
+    .collaborate-container a {
+        font-size: 13.8vw;
     }
 
     /* Footer */
