@@ -1,57 +1,43 @@
-let cursor_delay_element, cursor_element;
-let current_x, current_y;
-let target_x, target_y;
+// Declaração de variáveis globais
+let cursor_element; // elemento HTML que representa o cursor personalizado
+let current_x = 0;
+let current_y = 0;
+let target_x = 0;
+let target_y = 0;
+let cursor_size = 20;
+let target_size = 20;
 
+function setup() {
+  noCanvas(); // não desenha um canvas do p5
 
-function setup() 
-{
-  noCanvas();
-  
-  cursor_delay_element = select ("#meu_cursor_delay");
-  cursor_delay_element.show();
-  
-  cursor_element = select ("#meu_cursor");
+  cursor_element = select("#meu_cursor");
   cursor_element.show();
-  
-  current_x = mouseX;
-  current_y = mouseY;
+
+  // Hover aumenta cursor
+  const hoverElements = selectAll('a, button'); // podes adicionar classes personalizadas
+
+   // Para cada elemento desses, adiciona um comportamento ao passar o rato por cima (hover)
+  hoverElements.forEach(el => {
+    el.mouseOver(() => {
+      target_size = 50; // aumenta o tamanho do cursor
+    });
+    el.mouseOut(() => {
+      target_size = 20; // volta ao normal
+    });
+  });
 }
 
-
-function draw() 
-{
-  const w_delay = 100;
-  const h_delay = 100;
-  cursor_delay_element.size (w_delay, h_delay);
-  cursor_delay_element.style ("border-radius", w_delay/2+"px");
-  
-  
+function draw() {
+  // Atualiza a posição alvo com a posição do rato
   target_x = mouseX;
   target_y = mouseY;
-  
-  const lerpAmount = 0.05;
-  current_x = lerp(current_x, target_x, lerpAmount);
-  current_y = lerp(current_y, target_y, lerpAmount);
-  
-  cursor_delay_element.position (current_x-w_delay/2, current_y-h_delay/2, "fixed");
-  
-  
-  const w = 10;
-  const h = 10;
-  cursor_element.size (w, h);
-  cursor_element.style ("border-radius", w/2+"px");
-  cursor_element.position (target_x-w/2, target_y-h/2, "fixed");
+
+  // Lerp posição e tamanho
+  current_x = lerp(current_x, target_x, 0.8);
+  current_y = lerp(current_y, target_y, 0.8);
+  cursor_size = lerp(cursor_size, target_size, 0.35);
+
+  cursor_element.size(cursor_size, cursor_size);
+  cursor_element.style("border-radius", cursor_size / 2 + "px");
+  cursor_element.position(current_x - cursor_size / 2, current_y - cursor_size / 2, "fixed");
 }
-
-
-function hideCustomCursor()
-{
-  cursor_delay_element.hide();
-}
-
-
-function showCustomCursor() 
-{
-  cursor_delay_element.show();
-}
-
