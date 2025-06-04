@@ -533,7 +533,6 @@ nav a.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 5rem;
 }
 
 .project-main {
@@ -1036,7 +1035,7 @@ nav a.active {
     padding-bottom: 1.5rem;
   }
 
-  .about-data h1 {
+  .about-data h2 {
     font-family: "fontmedium";
     font-size: 7vw;
     font-weight: 400;
@@ -1044,10 +1043,8 @@ nav a.active {
   }
 
   .about-data p {
-    line-height: 1.5rem;
     font-family: "fontregular";
     font-size: 1.12rem;
-    font-weight: 400;
     width: 55%;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -1095,7 +1092,7 @@ nav a.active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15rem;
+    margin-top: 12rem;
   }
 
   .experience-container {
@@ -1111,60 +1108,6 @@ nav a.active {
     font-weight: 400;
     line-height: 1.1;
   }
-
-.whatido {
-    pointer-events: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 15rem;
-}
-
-.container-whatido {
-    display: flex;
-    width: 93%;
-    padding-top: 1.2rem;
-}
-
-.whatido-text {
-    width: 100%;
-    text-align: left;
-}
-
-.whatido-text h2 {
-    font-family: "fontmedium";
-    font-size: 2rem;
-    font-weight: 300;
-    padding-top: 1rem;
-}
-
-.whatido-list {
-    display: flex;
-    list-style: none;
-    width: 100%;
-    justify-content: right;
-    justify-items: right;
-    border-top: solid rgba(14, 14, 14, 0.2);
-}
-
-.whatidoo-list{
-    list-style: none;
-    width: 100%;
-}
-
-.whatido-descriptionnoborder p {
-    font-size: 1.5rem;
-}
-
-.whatido-descriptionnoborder {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    border-bottom: solid rgba(14, 14, 14, 0.2);
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
-}
 
 .work-experience {
     pointer-events: none;
@@ -1201,7 +1144,6 @@ nav a.active {
     width: 100%;
     justify-content: right;
     justify-items: right;
-    
 }
 
 .work-list{
@@ -1214,11 +1156,7 @@ nav a.active {
 }
 
 .work-title {
-    width: 40%;
-}
-
-.work-position {
-    width: 33%;
+    opacity: 50%;
 }
 
 .work-year{
@@ -1326,9 +1264,12 @@ nav a.active {
     }
 
     /* WORKS PAGE */
+    .allworks-section {
+        padding-bottom: 3rem;
+    }
 
     .allworks-container h2 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
     
     .projects_section {
@@ -1341,12 +1282,12 @@ nav a.active {
         flex-direction: column;
     }
 
-    .tablet-next {
-        display: flex;
+    .tablet-container {
+        gap: 3rem;
     }
 
-    .img-tablet {
-        padding-bottom: 3rem;
+    .tablet-next {
+        display: flex;
     }
 
     .tablet-text {
@@ -1386,26 +1327,32 @@ nav a.active {
     }
 
     /* ABOUT PAGE */
+    .hero-about {
+        margin-top: 5rem;
+    }
+
     .about-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .about-data {
         width: 100%;
     }
 
-    .about-data h1 {
-        font-size: 5rem;
+    .about-data h2 {
+        padding-top: 1.5rem;
+        font-size: 4rem;
     }
 
     .about-data p {
+        font-size: 1.3rem;
         width: 100%;
-        padding-top: 1rem;
-        padding-bottom: 0rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 
-    .social-links-about {
-        padding-bottom: 1rem;
+    .social-links-about a{
+        font-size: 1.3rem;
     }
 
     .image-placeholder-about {
@@ -1414,22 +1361,15 @@ nav a.active {
         position: relative;
         width: 100%;
         border-radius: 0;
-        height: 50rem;
-        overflow: hidden;
+        height: 92vh;
     }
-
-    .image-placeholder-about img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
 
       .experience {
         margin-top: 6rem;
       }
 
       .experience-container h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
       
       .work-experience {
@@ -1441,7 +1381,7 @@ nav a.active {
       }
 
       .work-text h2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
       }
 
       .container-list {
@@ -1451,13 +1391,7 @@ nav a.active {
       }
 
       .work-list {
-        padding-top: 1rem;
-        padding-bottom: 3rem;
         width: 100%;
-      }
-
-      .work-experience2 {
-        margin-bottom: 0.5rem;
       }
 }
 
@@ -1601,12 +1535,13 @@ nav a.active {
       }
 
       /* WORKS PAGE */
-      .allworks-container h2 {
-        font-size: 3rem;
+    .allworks-container h2 {
+    font-size: 2.5rem;
     }
 
     .allworks-section {
-        padding-bottom: 3rem;
+        padding-top: 7rem;
+        padding-bottom: 1rem;
     }
 
     .tabletwork {
@@ -1708,23 +1643,26 @@ nav a.active {
     }
 
     /* ABOUT PAGE */
+    .hero-about {
+        margin-top: 4rem;
+    }
+
     .about-data {
         width: 100%;
     }
 
-    .about-data h1 {
-        font-size: 3rem;
+    .about-data h2 {
+        font-size: 2.5rem;
     }
 
     .about-data p {
-        font-size: 1.5rem;
+        font-size: 1.12rem;
         padding-top: 1.5rem;
-        padding-bottom: 0rem;
+        padding-bottom: 1.5rem;
     }
 
-    .social-links-about {
-        flex-direction: column;
-        gap: 0.87rem;
+    .social-links-about a {
+        font-size: 1rem;
     }
 
     .image-placeholder-about {
@@ -1733,20 +1671,20 @@ nav a.active {
         position: relative;
         width: 100%;
         border-radius: 0;
-        height: 28rem;
+        height: 60vh;
         overflow: hidden;
     }
 
-    .work-experience {
-        padding-top: 1rem;
+    .experience {
+        margin-top: 3rem;
     }
 
     .experience-container h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
       }
       
       .work-text h2 {
-        font-size: 1.5rem;
+        font-size: 1.12rem;
       }
 
       .container-list {
@@ -1756,18 +1694,11 @@ nav a.active {
       }
 
       .work-list {
-        padding-top: 1rem;
-        padding-bottom: 3rem;
         width: 100%;
       }
 
       .work-list li p {
         width: 100%;
-        font-size: 1.12rem;
-      }
-
-      .work-experience2 {
-        margin-bottom: 0.5rem;
-        padding-top: 1rem;
+        font-size: 1rem;
       }
 }
