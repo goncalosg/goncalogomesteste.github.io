@@ -156,7 +156,7 @@ nav a.active {
     width: 93%;
 }
 
-.hero_container h1 {
+.hero_container h4 {
     font-size: 1.2rem;
     font-family: "fontregular";
 }
@@ -1127,7 +1127,7 @@ button {
     align-items: end;
   }
 
-  .experience-container h1 {
+  .experience-container h2 {
     font-family: "fontmedium";
     font-size: 3rem;
     font-weight: 400;
@@ -1157,8 +1157,8 @@ button {
     border-bottom: solid rgba(14, 14, 14, 0.2);
 }
 
-.work-text h2 {
-    font-family: "fontmedium";
+.work-text h3 {
+    font-family: "fontregular";
     font-size: 2rem;
     font-weight: 300;
     padding-bottom: 1rem;
@@ -1176,31 +1176,24 @@ button {
     width: 50%;
 }
 
-.work-description {
-    width: 100%;
-}
-
-.work-title {
-    opacity: 50%;
-}
-
-.work-year{
-    width: 20%;
-    text-align: end;
-    text-decoration: none;
-}
-
-.work-descriptionnoborder p {
-    font-size: 1.12rem;
-}
-
-.work-descriptionnoborder {
+dl {
     display: flex;
     width: 100%;
     justify-content: space-between;
      border-bottom: solid rgba(14, 14, 14, 0.2);
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
+}
+
+dt {
+    opacity: 50%;
+    font-size: 1.12rem;
+}
+
+dd {
+    width: 40%;
+    text-align: end;
+    text-decoration: none;
 }
 
 @media (max-width: 1024px) {
@@ -1393,7 +1386,7 @@ button {
         margin-top: 6rem;
       }
 
-      .experience-container h1 {
+      .experience-container h2 {
         font-size: 2.5rem;
       }
       
@@ -1405,7 +1398,7 @@ button {
         padding-top: 2rem;
       }
 
-      .work-text h2 {
+      .work-text h3 {
         font-size: 1.7rem;
       }
 
@@ -1417,6 +1410,14 @@ button {
 
       .work-list {
         width: 100%;
+      }
+
+      .work-list dt {
+        font-size: 1.2rem;
+      }
+
+      .work-list dd {
+        font-size: 1.2rem;
       }
 }
 
@@ -1704,11 +1705,11 @@ button {
         margin-top: 3rem;
     }
 
-    .experience-container h1 {
+    .experience-container h2 {
         font-size: 1.5rem;
       }
       
-      .work-text h2 {
+      .work-text h3 {
         font-size: 1.12rem;
       }
 
@@ -1722,8 +1723,12 @@ button {
         width: 100%;
       }
 
-      .work-list li p {
-        width: 100%;
+      .work-list dt {
+        font-size: 1rem;
+      }
+
+    .work-list dd {
+        width: 60%;
         font-size: 1rem;
       }
 }
