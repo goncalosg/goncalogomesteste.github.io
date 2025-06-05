@@ -624,6 +624,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     width: 93%;
     padding: 4.5rem 0 10rem;
     display: flex;
+    margin: 0 auto;
   }
   
 .project-title, .project-meta {

@@ -1,4 +1,4 @@
-.autoShow {
+.autoShow { 
     animation: text-appear both 1.5s ease;
     animation-timeline: view();
     animation-range: entry 20% cover 70vh;
