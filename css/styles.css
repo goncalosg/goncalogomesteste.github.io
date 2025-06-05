@@ -879,7 +879,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 9rem;
+    margin-top: 10rem;
   }
   
 .about-container, .experience-container {
@@ -1440,10 +1440,6 @@ dd {
     }
 
     /* ABOUT PAGE */
-    .hero-about {
-        margin-top: 4rem;
-    }
-
     .about-data {
         width: 100%;
     }
