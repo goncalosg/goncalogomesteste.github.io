@@ -518,7 +518,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     opacity: 50%;
 }
 
-.projects_list li a:hover { /* Animação hover */
+.projects_list li a:hover { /* Animação hover que faz mexer tudo para a direita */
     border-bottom: solid #0E0E0E;
     translate: 0.25rem 0;
 }
@@ -599,7 +599,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
 }
 
 /* PROJECT PAGE */
-.hero-projects {
+.hero-projects, .image-placeholder-project {
     width: 100%;
   }
   
@@ -609,8 +609,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     align-items: center;
   }
   
-  .image-placeholder-project {
-    width: 100%;
+  .image-placeholder-project { /* primeira imagem que ocupa 100% do ecrã */
     height: 100vh;
     overflow: hidden;
   }
@@ -621,38 +620,30 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     object-fit: cover;
   }
 
-  /* Project Details */
-  .project-details2 {
+  .project-details2 {   /* Project Details */
     width: 93%;
-    padding-top: 4.5rem;
-    padding-bottom: 10rem;
+    padding: 4.5rem 0 10rem;
     display: flex;
   }
   
-.project-title {
-  width: 50%;
+.project-title, .project-meta {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.project-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.project-title {
+  width: 50%;
+}
+
+.project-meta-item h3, .project-meta-item p, .project-description p {
+  font-family: "fontregular";
+  font-size: 1.12rem;
+  padding-bottom: 0.2rem;
 }
 
 .project-meta-item h3 {
-  font-size: 1.12rem;
-  font-family: "fontregular";
   opacity: 0.5;
-  padding-bottom: 0.2rem;
-}
-
-.project-meta-item p {
-  font-size: 1.12rem;
-  font-family: "fontregular";
-  padding-bottom: 0.2rem;
 }
 
 .project-title a {
@@ -666,7 +657,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
   max-width: max-content;
 }
 
-.project-title a::after {
+.project-title a::after { /* Animação hover underline */
   content: "";
   position: absolute;
   left: 0;
@@ -678,17 +669,15 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
   transform: scaleX(1);
 }
 
-/* Animação de entrada (hover) */
-.project-title a.animate-in::after {
+.project-title a.animate-in::after { /* Animação quando dou hover */
   animation: underline-in 0.8s forwards;
 }
 
-/* Animação de saída (tirar hover) */
-.project-title a.animate-out::after {
+.project-title a.animate-out::after { /* Animação quando tiro hover */
   animation: underline-out 0.8s forwards;
 }
 
-/* Keyframes de entrada: direita → esquerda */
+/* Keyframes quando dou hover da direita para esquerda */
 @keyframes underline-in {
   0% {
     transform: scaleX(1);
@@ -708,7 +697,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
   }
 }
 
-/* Keyframes de saída: esquerda → direita */
+/* Keyframes quando tiro hoer da esquerda para direita */
 @keyframes underline-out {
   0% {
     transform: scaleX(1);
@@ -746,19 +735,9 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     font-size: 1.2rem;
   }
 
-  /* Project Image */
-.first-image {
-  width: 93%;
-  margin: 0 auto; /* centra horizontalmente a secção */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 1rem;
-}
-
-.video-fullscreen {
+.video-fullscreen { /* Video */
   width: 100%;
-  max-height: 54rem; /* para limitar a altura */
+  max-height: 54rem; /* Máxima altura */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -769,7 +748,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
 .video-fullscreen video {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ou cover, depende do que preferes */
+  object-fit: contain;
   object-position: center center;
   display: block;
 }
@@ -780,12 +759,19 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     object-fit: cover;
   }
 
-.project-image {
-    width: 93%;
+.first-image, .project-image { /* Project Image */
+  width: 93%;
+  margin: 0 auto; /* centra horizontalmente a secção */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.project-image { /* Primeira imagem e galeria do projeto com grid para imagens */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.12rem;
-    padding-bottom: 1rem;
 }
 
 .projectimg-wrapper {
@@ -793,31 +779,23 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     width: 100%;
     height: 46rem;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
 }
-  
+
 .projectimg-wrapper img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.5s ease;
     z-index: 1;
 }
 
-/* .projectimg-wrapper:hover img {
-    transform: scale(1.05);
-} */
-
-/* Next Project */
-.nextproject {
+.nextproject { /* Próximo projeto */
     width: 93%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin: 5rem auto 2rem;
 }
 
 .nextworks {
@@ -827,24 +805,13 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     gap: 1.5rem;
 }
 
-.container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.nextworks p, .nextworks a {
+  font-family: "fontregular";
+  font-size: 1.5rem;
+  position: relative;
 }
 
-.nextworks p {
-    font-family: "fontregular";
-    font-size: 1.5rem;
-}
-
-.nextworks a {
-    font-family: "fontregular";
-    font-size: 1.5rem;
-      position: relative;
-}
-
-.nextworks a::after {
+.nextworks a::after { /* Animação hover underline */
     content: "";
     position: absolute;
     left: 0;
@@ -860,6 +827,12 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
 .nextworks a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .nextimage {
@@ -881,7 +854,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     filter: brightness(0.8);
 }
 
-.nextimage img:hover {
+.nextimage img:hover { /* Hover de zoom na imagem */
     transform: scale(1.02);
 }
 
@@ -902,7 +875,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
   width: 100%;
   height: 0.15rem;
   background-color: #FAFAFA;
-  margin-top: 0.1rem; /* controla a distância do sublinhado */
+  margin-top: 0.1rem; /* Distância do sublinhado */
 }
 
 /* ABOUT PAGE */
