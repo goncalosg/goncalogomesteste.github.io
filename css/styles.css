@@ -17,7 +17,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Garante que padding e border não aumentam o tamanho real dos elementos */
 }
 
 body {
@@ -27,15 +27,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    cursor: none;
+    cursor: none; /* Tira o cursor default */
 }
 
-#meu_cursor 
-{
-  pointer-events: none;
+#meu_cursor { /* Cursor Personalizado */
+  pointer-events: none;  /* Impede que o cursor interaja com elementos na página */
   z-index: 9999;
   background-color: rgb(255, 255, 255);
-  mix-blend-mode: difference;
+  mix-blend-mode: difference; /* Cria contraste com o fundo */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,23 +42,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, button {
-  cursor: none !important;
+  cursor: none !important; /* Meti !imporant para o cursor default não aparecer em links */
+  text-decoration: none;
+  color: inherit;
+  position: relative; /* Necessário para aparecer o underline em hovers */
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-span {
+span { /* Spans com diferentes espaçamentos para cada "↗" */
     padding-left: 0.5rem;
     display: inline-block;
     vertical-align: bottom;
     line-height: 1;
-}
-
-.span2 {
-    padding-left: 0.3rem;
 }
 
 .span3 {
@@ -74,10 +67,13 @@ span {
     padding-left: 0.3rem;
 }
 
-/* HOME PAGE */
+.span5 {
+    padding-left: 0.3rem;
+    line-height: 1.05;
+}
 
-/* Header */
-header {
+/* HOME PAGE */
+header { /* Header */
     display: flex;
     width: 100%;
     justify-content: center;
@@ -85,7 +81,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 999; /* Mantém o header por cima de todos os elementos */
     mix-blend-mode: difference;
 }
 
@@ -96,13 +92,12 @@ nav {
     width: 93%;
 }
 
-.logo {
+.logo, nav ul {
     font-size: 1.12rem;
 }
 
 nav ul {
     display: flex;
-    font-size: 1.12rem;
     list-style: none;
     gap: 1.5rem;
     color:white;
@@ -113,37 +108,39 @@ nav a {
     color: white;
 }
 
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.12rem;
-    width: 100%;
-    height: 0.1rem;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+nav a::after,
+.see-more-container a::after,
+.social-links a::after,
+.intro-description a::after { /* Animação do underline em hover */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.12rem;
+  width: 100%;
+  height: 0.1rem;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
 }
 
-nav a:hover::after {
-    transform: scaleX(1);
+nav a:hover::after,
+.see-more-container a:hover::after,
+.social-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
-nav a:not(:hover)::after {
-    transform: scaleX(0);
-    transform-origin: right;
+nav a.active { /* Na página ativa vai reduzir a opacidade do link */
+  opacity: 0.5;
 }
 
-nav a.active {
-    opacity: 50%;
-}
 /* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 100vh; /* Ocupa a altura total da viewport */
     position: relative;
     width: 100%;
     align-items: center;
@@ -158,7 +155,6 @@ nav a.active {
 
 .hero_container h4 {
     font-size: 1.2rem;
-    font-family: "fontregular";
 }
 
 .from {
@@ -216,8 +212,8 @@ nav a.active {
     position: relative;
 }
 
-/* Animação de entrada (hover) */
-@keyframes underline-in {
+/* Animação do underline a entrar de um lado e a sair para o outro */
+@keyframes underline-in { /* Animação de entrada */
   0% {
     transform: scaleX(1);
     transform-origin: right;
@@ -236,8 +232,7 @@ nav a.active {
   }
 }
 
-/* Animação de saída (unhover) */
-@keyframes underline-out {
+@keyframes underline-out { /* Animação de saída (unhover) */
   0% {
     transform: scaleX(1);
     transform-origin: left;
@@ -256,8 +251,7 @@ nav a.active {
   }
 }
 
-/* Por padrão, linha está estática */
-.intro-description a::after {
+.intro-description a::after { /* Default, a linha mantém */
   content: "";
   position: absolute;
   left: 0;
@@ -269,13 +263,11 @@ nav a.active {
   transform-origin: right;
 }
 
-/* Quando adicionamos classe hover */
-.intro-description a.animate-in::after {
+.intro-description a.animate-in::after { /* Quando dou hover */
   animation: underline-in 0.8s forwards;
 }
 
-/* Quando retiramos hover */
-.intro-description a.animate-out::after {
+.intro-description a.animate-out::after { /* Quando tiro o hover */
   animation: underline-out 0.8s forwards;
 }
 
@@ -305,11 +297,10 @@ nav a.active {
 
 .see-more-container a {
     font-size: 1.12rem;
-    position: relative;
     font-family: "fontregular";
 }
 
-.see-more-container a::after {
+.see-more-container a::after { /* Animação hover underline */
     content: "";
     position: absolute;
     left: 0;
@@ -327,21 +318,20 @@ nav a.active {
     transform-origin: left;
 }
 
-.projects {
+.projects { /* Grelha de 2 colunas para projetos */
     width: 93%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
-.img-wrapper {
+.img-wrapper, .image-container {
     width: 100%;
   }
   
   .image-container {
-    width: 100%;
     height: 40rem;
-    overflow: hidden; /* corta a imagem só dentro deste bloco */
+    overflow: hidden; /* corta a imagem dentro deste bloco */
     display: flex;
   }
   
@@ -350,10 +340,9 @@ nav a.active {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    display: block;
   }
   
-  .image-container:hover img {
+  .image-container:hover img { /* Hover de zoom na imagem */
     transform: scale(1.02);
   }
   
@@ -376,94 +365,32 @@ nav a.active {
   }
 
 /* Collaborate Section */
-#email_container {
-  position: relative;
-  display: inline-block;
-}
-
-button {
-  font-family: inherit;
-  font-size: 0.9rem;
-  padding: 0.4rem 0.7rem;
-  background-color: #111;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-#email_container button 
-{
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 80%;
-}
-
-#email {
-    font-family: "fontmedium";
-    font-size: 16vw;
-}
-
 .contact-block {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* força o footer para o fundo */
-  align-items: center;
-  text-align: center;
-  padding: 10rem 0 2rem 0; /* top e bottom */
+  justify-content: space-between;
+  padding: 16rem 0 2rem 0;
   gap: 5rem;
 }
 
 .collaborate {
   width: 100%;
-  flex: 1; /* ocupa o espaço vertical disponível */
   display: flex;
   justify-content: center;
-  align-items: center; /* centraliza verticalmente */
 }
 
 .collaborate-container {
     width: 93%;
-    padding: 0;
 }
 
 .collaborate-container a {
-    font-size: 13.9vw;
+    font-size: 14vw;
     font-family: "fontmedium";
-}
-
-/* .collaborate-container a {
-    font-size: 1.12rem;
-    font-family: "fontregular";
-    position: relative;
-    display: inline-flex;  
-    gap: 0.3rem;
-    padding-bottom: 0.3rem;
-}
-
-.collaborate-container a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0.12rem;  
-    width: 100%;
-    height: 0.11rem;  
-    background-color: #171718;
-    transform: scaleX(0);
-    transform-origin: right center;
-    transition: transform 0.3s ease;
-}
-
-.collaborate-container a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left center;
 }
 
 /* Footer */
 .footer {
-    padding: 0;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -497,7 +424,6 @@ button {
 .social-links {
     list-style: none;
     display: flex;
-    grid-template-columns: repeat(2, auto);
     gap: 1.5rem;
 }
 
@@ -506,12 +432,10 @@ button {
     font-family: "fontregular";
     font-size: 1.12rem;
     padding-bottom: 0.3rem;
-    position: relative;
-    gap: 0.3rem;
     transition: color 0.3s ease-in-out;
 }
 
-.social-links a::after {
+.social-links a::after { /* Animação hover underline */
     content: "";
     position: absolute;
     left: 0;
@@ -530,21 +454,20 @@ button {
 }
 
 /* Página WORKS */
-
-/* Works title */
-.allworks-section {
+.allworks-section { /* Works title */
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10rem;
-    padding-bottom: 8rem;
+    padding: 10rem 0 8rem;
 }
 
-.allworks-container {
-    width: 93%;
-    display: flex;
-    justify-content: space-between;
+.allworks-container,
+.project-main,
+.tablet-container {
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .allworks-container h2 {
@@ -552,25 +475,75 @@ button {
     font-size: 7rem;
 }
 
-/* Works title */
-.projects_section {
+.projects_section { /* Secção de projectos */
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.project-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 93%;
-}
-
-.projects_list{
+.projects_list{ /* Lista de projetos */
     width: 100%;
     list-style: none;
     text-decoration: none;
+}
+
+.projects_list li a{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    text-decoration: none;
+    padding: 1.7rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+    border-bottom: solid #9E9E9E;
+}
+
+.projects_list h3,
+.projects_list p { /* Título e descrição */
+  font-size: 1.2rem;
+  font-family: "fontregular";
+  opacity: 50%;
+  transition: all 0.3s ease;
+}
+
+.projects_list li a:hover h3,
+.projects_list li a:hover p,
+.projects_list li a:hover .arrow-icon {
+  opacity: 100%;
+}
+
+.arrow-icon { /* Ícone à direita */
+    opacity: 50%;
+}
+
+.projects_list li a:hover { /* Animação hover */
+    border-bottom: solid #0E0E0E;
+    translate: 0.25rem 0;
+}
+
+.projects_list .img_container{ /* Imagem que aparece no hover */
+    position: absolute;
+    z-index: 999;
+    top: -100%;
+    right: 15%;
+    transform-origin: center;
+    height: 18.25rem;
+    width: 31.25rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.projects_list li a:hover .img_container{
+    opacity: 1;
+}
+
+.img_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .text_container {
@@ -590,84 +563,7 @@ button {
     justify-content: flex-end;
 } 
 
-.arrow-icon {
-    opacity: 50%;
-}
-
-.projects_list h3 {
-    font-size: 1.2rem;
-    font-family: "fontregular";
-    transition: all 0.3s ease;
-    opacity: 50%;
-}
-
-.projects_list p {
-    font-family: "fontregular";
-    font-size: 1.2rem;
-    opacity: 50%;
-    transition: all 0.3s ease;
-}
-
-.projects_list li a{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 100%;
-    text-decoration: none;
-    padding: 1.7rem 0;
-    position: relative;
-    transition: all 0.3s ease;
-    border-bottom: solid #9E9E9E;
-}
-
-.projects_list .img_container{
-    position: absolute;
-    z-index: 999;
-    top: -100%;
-    right: 15%;
-    transform-origin: center;
-    height: 18.25rem;
-    width: 31.25rem;
-    opacity: 0;
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-.projects_list li a:hover h3{
-    opacity: 100%;
-}
-
-.projects_list li a:hover p{
-    opacity: 100%;
-}
-
-.projects_list li a:hover .arrow-icon{
-    opacity: 100%;
-}
-
-.projects_list li a:hover {
-    border-bottom: solid #0E0E0E;
-    translate: 0.25rem 0;
-}
-
-.projects_list li a:hover .img_container{
-    opacity: 1;
-}
-
-.projects_list .img_container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.projects_list li a,
-.projects_list li a:visited {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Section Mobile */
-.tabletwork {
+.tabletwork { /* Versão em mobile */
     width: 100%;
     display: none;
     flex-direction: column;
@@ -675,10 +571,7 @@ button {
 }
 
 .tablet-container {
-    width: 93%;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-end; 
 }
 
@@ -692,7 +585,6 @@ button {
   .img-tablet img {
     width: 100%;
     height: auto;
-    display: block;
     object-fit: cover;
     object-position: center;
   }
@@ -701,18 +593,9 @@ button {
     padding-top: 1rem;
 }
   
-  .tablet-type {
-    font-family: "fontmedium";
-    color:#171718;
-    font-size: 1.6rem;
-    padding-bottom: 0.3rem;
-  }
-
-  .tablet-name {
-    font-family: "fontmedium";
-    color: #171718;
-    font-size: 1.12rem;
-    opacity: 75%;
+.tablet-type, .tablet-name { /* Tipos e nomes de projeto */
+  font-family: "fontmedium";
+  color: #171718;
 }
 
 /* PROJECT PAGE */
@@ -1529,7 +1412,7 @@ dd {
 
     /* Footer */
     .contact-block {
-        padding: 6rem 0 1rem 0;
+        padding: 10rem 0 1rem 0;
         gap: 3rem;
     }
 
