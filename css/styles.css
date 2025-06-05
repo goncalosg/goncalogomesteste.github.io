@@ -622,7 +622,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
 
   .project-details2 {   /* Project Details */
     width: 93%;
-    padding: 4.5rem 0 10rem;
+    padding: 4.5rem 0 6rem;
     display: flex;
     margin: 0 auto;
   }
@@ -758,6 +758,20 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     width: 100%;
     height: auto;
     object-fit: cover;
+  }
+
+  .img-fullscreen3 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+    .img-fullscreen3 img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+
   }
 
 .first-image { /* Project Image */
