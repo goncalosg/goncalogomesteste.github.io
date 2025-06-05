@@ -759,19 +759,13 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     object-fit: cover;
   }
 
-.first-image, .project-image { /* Project Image */
+.first-image { /* Project Image */
   width: 93%;
   margin: 0 auto; /* centra horizontalmente a secção */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 1rem;
-}
-
-.project-image { /* Primeira imagem e galeria do projeto com grid para imagens */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.12rem;
 }
 
 .projectimg-wrapper {
@@ -1415,6 +1409,11 @@ dd {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .img-fullscreen2 img {
+        width: 100%;
+        height: auto;
     }
 
     .nextproject {
