@@ -371,7 +371,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
   flex-direction: column;
   justify-content: space-between;
   padding: 16rem 0 2rem 0;
-  gap: 5rem;
+  gap: 8rem;
 }
 
 .collaborate {
@@ -971,7 +971,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 12rem;
+    margin-top: 9rem;
   }
 
   .experience-container h2 {
@@ -1093,7 +1093,8 @@ dd {
 
     /* Footer */
     .contact-block {
-        padding-bottom: 1rem;
+        padding: 10rem 0 1rem 0;
+        gap: 6rem;
     }
 
     .social-links {
@@ -1203,7 +1204,7 @@ dd {
     }
 
       .experience {
-        margin-top: 6rem;
+        margin-top: 5rem;
       }
 
       .experience-container h2 {
@@ -1321,7 +1322,8 @@ dd {
 
     /* Footer */
     .contact-block {
-        padding: 10rem 0 1rem 0;
+        padding: 8rem 0 1rem 0;
+        gap: 4rem;
     }
 
     .footer-container {
@@ -1452,7 +1454,7 @@ dd {
 
     .about-data p {
         font-size: 1.12rem;
-        padding: 1.5rem 0;
+        padding: 1.5rem 0 0.5rem 0;
         line-height: 1.5;
     }
 
@@ -1471,7 +1473,7 @@ dd {
     }
 
     .experience {
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
 
     .experience-container h2 {
