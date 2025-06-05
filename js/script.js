@@ -39,32 +39,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Locomotive Scroll
+
+  // Define a posição atual do scroll
 let scrollAmount = window.scrollY || 0;
+
+// Define a posição desejada (alvo) do scroll
 let targetScroll = scrollAmount;
+
+// Flag para saber se está atualmente a decorrer uma animação de scroll
 let isScrolling = false;
 
+// Adiciona um listener ao evento de scroll via rato (roda do rato)
 window.addEventListener('wheel', function(event) {
   event.preventDefault();  // Evita scroll padrão
+
+   // Atualiza o valor alvo do scroll com base na direção e intensidade do movimento da roda
   targetScroll += event.deltaY;
   
-  // Limita o scroll ao tamanho da página
+  // Garante que não se ultrapassa o topo ou o fundo da página ao dar scroll
   targetScroll = Math.max(0, Math.min(targetScroll, document.body.scrollHeight - window.innerHeight));
   
+   // Se não estiver já a fazer scroll suave, inicia a animação
   if (!isScrolling) {
     isScrolling = true;
     requestAnimationFrame(smoothScroll);
   }
-}, { passive: false });
+}, { passive: false }); // Define como não passivo para permitir o uso de preventDefault()
 
+// Função que executa o scroll suave
 function smoothScroll() {
+  // Aproxima progressivamente o scroll atual do valor alvo
   scrollAmount += (targetScroll - scrollAmount) * 0.09; // acelera a interpolação
 
+  // Move o scroll da janela para a nova posição interpolada
   window.scrollTo(0, scrollAmount);
 
+  // Se ainda estiver longe o suficiente do destino, continua a animar
   if (Math.abs(scrollAmount - targetScroll) > 0.5) {
-    requestAnimationFrame(smoothScroll);
+    requestAnimationFrame(smoothScroll); // Continua o loop de animação
   } else {
-    isScrolling = false;
+    isScrolling = false; // Termina a animação quando chega perto do alvo
   }
 }
 
