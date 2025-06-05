@@ -497,7 +497,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     padding: 1.7rem 0;
     position: relative;
     transition: all 0.3s ease;
-    border-bottom: solid #9E9E9E;
+    border-bottom: solid rgba(14, 14, 14, 0.2);
 }
 
 .projects_list h3,
@@ -888,15 +888,18 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     margin-top: 9rem;
   }
   
-  .about-container {
-    width: 93%;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    min-height: 85vh; 
-  }
+.about-container, .experience-container {
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
   
-  .image-placeholder-about {
+.about-container { /* Para ficar no fim da página */
+  min-height: 85vh; 
+}
+
+  .image-placeholder-about { /* Imagem à direita */
     position: absolute;
     top: 0.5rem;
     right: 0.5rem; 
@@ -912,32 +915,33 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     object-fit: cover;
   }
 
-  .about-data {
+  .about-data { /* texto sobre mim */
     width: 60%;
     padding-bottom: 1.5rem;
   }
 
+.about-data h2, .experience-container h2 {
+  font-family: "fontmedium";
+  font-weight: 400;
+  line-height: 1.1;
+}
+
   .about-data h2 {
-    font-family: "fontmedium";
     font-size: 7vw;
-    font-weight: 400;
-    line-height: 1.1;
   }
 
   .about-data p {
     font-family: "fontregular";
     font-size: 1.12rem;
     width: 55%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
   }
 
-  .social-links-about {
-    padding-top: 1rem;
-    list-style: none;
-    display: flex;
-    grid-template-columns: repeat(2, auto);
-    gap: 2rem;
+  .social-links-about { /* Links de redes sociais */
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  padding-top: 1rem;
 }
 
 .social-links-about a {
@@ -946,11 +950,10 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     font-size: 1.12rem;
     padding-bottom: 0.3rem;
     position: relative;
-    gap: 0.3rem;
     transition: color 0.3s ease-in-out;
 }
 
-.social-links-about a::after {
+.social-links-about a::after { /* Animação hover underline */
     content: "";
     position: absolute;
     left: 0;
@@ -968,7 +971,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     transform-origin: left center;
 }
 
-.experience {
+.experience { /* Secção de experiência */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -977,22 +980,11 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     margin-top: 12rem;
   }
 
-  .experience-container {
-    width: 93%;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-  }
-
   .experience-container h2 {
-    font-family: "fontmedium";
     font-size: 3rem;
-    font-weight: 400;
-    line-height: 1.1;
   }
 
-.work-experience {
-    pointer-events: none;
+.work-experience { /* Experiência de trabalho e educação */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1002,8 +994,6 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
 
 .container-workexperience {
     display: inline;
-    justify-content: space-between;
-    align-items: flex-start;
     width: 93%;
     padding-top: 1.2rem;
 }
@@ -1021,7 +1011,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     padding-bottom: 1rem;
 }
 
-.container-list {
+.container-list { /* Lista da experiência e educação */
     list-style: none;
     width: 100%;
     justify-content: right;
@@ -1038,32 +1028,29 @@ dl {
     width: 100%;
     justify-content: space-between;
      border-bottom: solid rgba(14, 14, 14, 0.2);
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
+    padding: 1.5rem 0;
 }
 
 dt {
-    opacity: 50%;
+    opacity: 0.5;
     font-size: 1.12rem;
 }
 
 dd {
     width: 40%;
     text-align: end;
-    text-decoration: none;
 }
 
 @media (max-width: 1024px) {
     /* TABLET */
+    #meu_cursor {
+    display: none;
+  }
 
-    .hero_container h1 {
+    .hero_container h4, .from {
         font-size: 1.5rem;
     }
-
-    .from {
-        font-size: 1.5rem;
-    }
-
+    
     /* Intro */
     .intro {
         padding-top: 10rem;
@@ -1077,7 +1064,6 @@ dd {
     .intro-description p {
         font-size: 2rem;
         padding-top: 2rem;
-        width: 100%;
     }
 
     /* Featured Works */
@@ -1094,31 +1080,16 @@ dd {
     flex-direction: column;
     }
 
-    .project-name {
-        bottom: 1.5rem;
-        font-size: 1.2rem;
-      }
-
-      .project-type {
+    .project-name, .project-type {
         font-size: 1.2rem;
       }
 
     .projects .img-wrapper {
         width: 100%;
-        height: auto;
     }
 
     .projects .img-wrapper img {
-        width: 100%;
         height: 40rem;
-    }
-
-    .img-wrapper:hover img {
-        pointer-events: none;
-     }
-
-    .img-wrapper:hover .hover-text {
-        pointer-events: none;
     }
 
     /* CTA */
@@ -1129,7 +1100,6 @@ dd {
     /* Footer */
     .contact-block {
         padding-bottom: 1rem;
-        gap: 3rem;
     }
 
     .social-links {
@@ -1174,12 +1144,11 @@ dd {
         height: 35rem;
     }
 
-    .img-tablet h3 {
+    .img-tablet h3, .img-tablet p {
         font-size: 1.2rem;
     }
 
     .img-tablet p {
-        font-size: 1.2rem;
         opacity: 50%;
     }
 
@@ -1251,18 +1220,8 @@ dd {
         padding-top: 2rem;
       }
 
-      .work-experience2 {
-        padding-top: 2rem;
-      }
-
       .work-text h3 {
         font-size: 1.7rem;
-      }
-
-      .container-list {
-        justify-content: left;
-        justify-items: left;
-        width: 100%;
       }
 
       .work-list {
@@ -1279,7 +1238,10 @@ dd {
 }
 
 @media (max-width: 480px) {
-    
+    #meu_cursor {
+    display: none;
+  }
+
     /* Mobile */
     .logo {
         font-size: 1rem;
@@ -1294,18 +1256,14 @@ dd {
       }
 
     /* Hero */
-    .hero_container span {
-        font-size: 0.87rem;
-    }
-
-    .hero_container h1 {
-        font-size: 0.87rem;
+    .hero_container h4 {
+        font-size: 1rem;
     }
 
     /* Intro */
     .intro {
         padding-top: 5rem;
-        padding-bottom: 7rem;
+        padding-bottom: 7.5rem;
     }
 
     .container-about{
@@ -1317,11 +1275,7 @@ dd {
         font-size: 1.12rem;
     }
 
-    .intro-description p {
-        font-size: 1.5rem;
-    }
-
-    .intro-description a {
+    .intro-description p, .intro-description a {
         font-size: 1.5rem;
     }
 
@@ -1347,6 +1301,7 @@ dd {
     .image-container {
         height: auto;
     }
+    
     .projects .img-wrapper {
         width: 100%;
         height: auto;
@@ -1361,24 +1316,11 @@ dd {
     display: flex;
     }
 
-    .project-name{
+    .project-name, .project-type {
         font-size: 1rem;
-    }
-
-    .project-type {
-        font-size: 1rem;
-    }
-
-    .img-wrapper:hover img {
-        pointer-events: none;
-     }
-
-    .img-wrapper:hover .hover-text {
-        pointer-events: none;
     }
 
     /* CTA */
-
     .collaborate-container a {
         font-size: 13.8vw;
     }
@@ -1386,7 +1328,6 @@ dd {
     /* Footer */
     .contact-block {
         padding: 10rem 0 1rem 0;
-        gap: 3rem;
     }
 
     .footer-container {
@@ -1401,11 +1342,7 @@ dd {
         align-items: start;
     }
 
-    .footer-left p {
-        font-size: 1rem;
-    }
-
-    .social-links a {
+    .footer-left p, .social-links a {
         font-size: 1rem;
     }
 
@@ -1431,24 +1368,15 @@ dd {
         display: flex;
     }
 
-    .tablet-next {
-        display: flex;
-    }
-
     .img-tablet {
         width: 100%;
-        display: flex;
     }
 
     .img-tablet img {
         height: 16rem;
     }
 
-    .img-tablet h3 {
-        font-size: 1rem;
-    }
-
-     .img-tablet p {
+    .img-tablet h3, .img-tablet p {
         font-size: 1rem;
     }
 
@@ -1466,14 +1394,7 @@ dd {
         gap: 1rem;
     }
 
-    .project-meta-item h3 {
-        font-size: 1rem;
-    }
-
-    .project-meta-item p {
-        font-size: 1rem;
-    }
-
+    .project-meta-item h3, .project-meta-item p, .project-description p,
     .project-title a {
         font-size: 1rem;
     }
@@ -1488,10 +1409,6 @@ dd {
 
     .project-description h2 {
         font-size: 1.8rem;
-    }
-
-    .project-description p {
-        font-size: 1rem;
     }
 
     .project-meta {
@@ -1509,11 +1426,7 @@ dd {
         gap: 1rem;
     }
 
-    .container p {
-        font-size: 1.2rem;
-    }
-
-    .container a {
+    .container p, .container a {
         font-size: 1.2rem;
     }
 
@@ -1540,12 +1453,12 @@ dd {
 
     .about-data p {
         font-size: 1.12rem;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        padding: 1.5rem 0;
+        line-height: 1.5;
     }
 
     .social-links-about a {
-        font-size: 1rem;
+        font-size: 1.12rem;
     }
 
     .image-placeholder-about {
@@ -1559,7 +1472,7 @@ dd {
     }
 
     .experience {
-        margin-top: 3rem;
+        margin-top: 5rem;
     }
 
     .experience-container h2 {
@@ -1573,10 +1486,6 @@ dd {
       .container-list {
         justify-content: left;
         justify-items: left;
-        width: 100%;
-      }
-
-      .work-list {
         width: 100%;
       }
 
