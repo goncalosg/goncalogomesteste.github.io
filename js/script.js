@@ -1,4 +1,6 @@
 // script.js
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Animação para .intro-description a
   const introLink = document.querySelector('.intro-description a');

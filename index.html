@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gonçalo Gomes - Digital Designer</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/animation.css">
     <link rel="icon" href="./Assets/Icons/favicon.svg" type="image/svg+xml">
-    <script src="p5.min.js"></script>
-    <script src="sketch.js"></script>
+    <script src="./js/p5.min.js"></script>
+    <script src="./js/sketch.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/scroll.js"></script>
 </head>
 <body>
     <div id="meu_cursor"></div>
@@ -33,7 +35,7 @@
     </section>
     
     <section class="intro">
-        <main class="container-about">
+        <main class="container-about autoShow">
             <div class="intro-text">
                 <h2>About me</h2>
             </div>
@@ -45,14 +47,14 @@
     </section> 
 
     <section class="featured">
-        <main class="featured-header">
+        <main class="featured-header autoShow-featured">
             <h2>Featured work</h2>
             <div class="see-more-container">
                 <a href="works.html">See all<span>↗</span></a>
             </div>
         </main>
         <div class="projects">
-            <article class="img-wrapper">
+            <article class="img-wrapper autoShow">
                 <a href="./Projects/project_lunedor.html">
                   <div class="image-container">
                     <img src="./Assets/Imagens/lunedormockup.webp" alt="Lune d'Or" />
@@ -63,7 +65,7 @@
                 </div>
             </a>
             </article>
-            <article class="img-wrapper">
+            <article class="img-wrapper autoShow-image">
                 <a href="./Projects/project_kurio.html">
                   <div class="image-container">
                     <img src="./Assets/Imagens/kuriomockup.webp" alt="Kurio" />
@@ -74,7 +76,7 @@
                 </div>
             </a>
             </article>
-            <article class="img-wrapper">
+            <article class="img-wrapper autoShow">
                 <a href="./Projects/project_cp.html">
                   <div class="image-container">
                     <img src="./Assets/Imagens/cpmockup.png" alt="Comboios de Portugal" />
@@ -85,7 +87,7 @@
                 </div>
             </a>
             </article>
-            <article class="img-wrapper">
+            <article class="img-wrapper autoShow">
                 <a href="./Projects/project_primaveralonga.html">
                   <div class="image-container">
                     <img src="./Assets/Imagens/primaveralongamockup.webp" alt="Primavera Longa" />
@@ -100,7 +102,7 @@
     </section>
 
     <footer class="contact-block">
-    <main class="collaborate">
+    <main class="collaborate autoShow-footer">
         <div class="collaborate-container">
       <a href="mailto:goncalogomes235@gmail.com">Let's connect <span class="span5">↗</span></a>
     </div>
