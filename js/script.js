@@ -1,6 +1,5 @@
 // script.js
 
-
 document.addEventListener("DOMContentLoaded", () => {
   // Animação para .intro-description a
   const introLink = document.querySelector('.intro-description a');
@@ -20,23 +19,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
- // Seleciona o link dentro do título do projeto (caso exista)
   const projectLink = document.querySelector('.project-title a');
-
-  // Verifica se o link existe antes de adicionar os listeners
   if (projectLink) {
-     // Animação ao passar o rato por cima do link do projeto
     projectLink.addEventListener('mouseenter', () => {
       projectLink.classList.remove('animate-out');
       projectLink.classList.add('animate-in');
     });
-
-    // Animação ao retirar o rato do link do projeto
     projectLink.addEventListener('mouseleave', () => {
       projectLink.classList.remove('animate-in');
       projectLink.classList.add('animate-out');
     });
   }
+
+  const animatedText = document.querySelector('.nextimage p');
+
+if (animatedText) {
+  animatedText.addEventListener('mouseenter', () => {
+    animatedText.classList.remove('animate-out');
+    animatedText.classList.add('animate-in');
+  });
+
+  animatedText.addEventListener('mouseleave', () => {
+    animatedText.classList.remove('animate-in');
+    animatedText.classList.add('animate-out');
+  });
+}
+
 
   // Locomotive Scroll
 

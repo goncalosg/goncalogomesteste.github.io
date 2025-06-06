@@ -678,46 +678,6 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
   animation: underline-out 0.8s forwards;
 }
 
-/* Keyframes quando dou hover da direita para esquerda */
-@keyframes underline-in {
-  0% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-  50% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-  50.01% {
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-  100% {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-}
-
-/* Keyframes quando tiro hoer da esquerda para direita */
-@keyframes underline-out {
-  0% {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-  50% {
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-  50.01% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-  100% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-}
-
   .project-description {
     width: 100%;
     color: #171718
@@ -864,7 +824,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     filter: brightness(0.8);
 }
 
-.nextimage img:hover { /* Hover de zoom na imagem */
+.nextimage a:hover img { /* Hover de zoom na imagem */
     transform: scale(1.02);
 }
 
@@ -876,7 +836,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none;
+    z-index: 10;
 }
 
 .nextimage p::after {
@@ -886,6 +846,14 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
   height: 0.15rem;
   background-color: #FAFAFA;
   margin-top: 0.1rem; /* Distância do sublinhado */
+}
+
+.nextimage p.animate-in::after { /* Quando dou hover */
+  animation: underline-in 0.8s forwards;
+}
+
+.nextimage p.animate-out::after { /* Quando tiro o hover */
+  animation: underline-out 0.8s forwards;
 }
 
 /* ABOUT PAGE */
