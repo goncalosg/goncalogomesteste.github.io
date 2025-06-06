@@ -154,7 +154,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
 }
 
 .hero_container h4 {
-    font-size: 1.2rem;
+    font-size: 1.12rem;
 }
 
 .from {
@@ -590,7 +590,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
   }
 
 .img-tablet div {
-    padding-top: 1rem;
+    margin-top: 0.5rem;
 }
   
 .tablet-type, .tablet-name { /* Tipos e nomes de projeto */
@@ -1058,7 +1058,7 @@ dd {
   }
 
     .hero_container h4, .from {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
     /* Intro */
@@ -1121,11 +1121,12 @@ dd {
 
     /* WORKS PAGE */
     .allworks-section {
+        padding-top: 12rem;
         padding-bottom: 3rem;
     }
 
     .allworks-container h2 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     
     .projects_section {
@@ -1139,11 +1140,11 @@ dd {
     }
 
     .tablet-container {
-        gap: 3rem;
+        gap: 2rem;
     }
 
-    .tablet-next {
-        display: flex;
+    .img-tablet {
+        gap: 0;
     }
 
     .tablet-text {
@@ -1166,7 +1167,7 @@ dd {
     /* PROJECT PAGE */
 
     .project-title h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .project-description p {
@@ -1196,7 +1197,7 @@ dd {
 
     .about-data h2 {
         padding-top: 1.5rem;
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .about-data p {
@@ -1283,7 +1284,7 @@ dd {
     }
 
     .intro-text h2 {
-        font-size: 1.12rem;
+        font-size: 1rem;
     }
 
     .intro-description p, .intro-description a {
@@ -1306,7 +1307,7 @@ dd {
     .projects {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     }
 
     .image-container {
@@ -1368,16 +1369,20 @@ dd {
 
       /* WORKS PAGE */
     .allworks-container h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     }
 
     .allworks-section {
-        padding-top: 7rem;
+        padding-top: 10rem;
         padding-bottom: 1rem;
     }
 
     .tabletwork {
         display: flex;
+    }
+
+    .tablet-container {
+        gap: 2rem;
     }
 
     .img-tablet {
@@ -1420,7 +1425,7 @@ dd {
     }
 
     .project-description h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .project-meta {
@@ -1448,7 +1453,7 @@ dd {
     }
 
     .container p, .container a {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .nextimage p {
@@ -1465,12 +1470,12 @@ dd {
     }
 
     .about-data h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .about-data p {
         font-size: 1.12rem;
-        padding: 1.5rem 0 0.5rem 0;
+        padding: 1rem 0 0.5rem 0;
         line-height: 1.5;
     }
 
