@@ -1,3 +1,42 @@
+/* Animação do underline a entrar de um lado e a sair para o outro */
+@keyframes underline-in { /* Animação de entrada */
+  0% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  50.01% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes underline-out { /* Animação de saída (unhover) */
+  0% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50.01% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
+
 /* Animação dos elementos ao dar scroll */
 .autoShow { 
     animation: text-appear both 1.5s ease; /* Aplica a animação 'text-appear' com duração de 1.5s */
