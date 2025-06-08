@@ -193,7 +193,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
 }
 
 .intro-text h2 {
-    font-size: 1.2rem;
+    font-size: 1.12rem;
     font-family: "fontregular";
 }
 
@@ -980,11 +980,21 @@ dd {
     text-align: end;
 }
 
+@media (hover: none), (pointer: coarse) {
+  #meu_cursor {
+    display: none !important;
+  }
+}
+
 @media (max-width: 1024px) {
     /* TABLET */
-    #meu_cursor {
-    display: none;
-  }
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
 
     .hero_container h4, .from {
         font-size: 1.2rem;
@@ -994,6 +1004,10 @@ dd {
     .intro {
         padding-top: 10rem;
         padding-bottom: 13rem;
+    }
+
+    .intro-text h2 {
+        font-size: 1.2rem;
     }
 
     .container-about {
@@ -1046,6 +1060,10 @@ dd {
         flex-direction: column;
         gap: 0.5rem;
         align-items: end;
+    }
+
+    .footer-left p, .social-links a {
+        font-size: 1.2rem;
     }
 
     /* WORKS PAGE */
@@ -1130,14 +1148,14 @@ dd {
     }
 
     .about-data p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         width: 100%;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
     }
 
     .social-links-about a{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .image-placeholder-about {
@@ -1179,10 +1197,6 @@ dd {
 }
 
 @media (max-width: 480px) {
-    #meu_cursor {
-    display: none;
-  }
-
     /* Mobile */
     .logo {
         font-size: 1rem;
@@ -1403,13 +1417,13 @@ dd {
     }
 
     .about-data p {
-        font-size: 1.12rem;
+        font-size: 1rem;
         padding: 1rem 0 0.5rem 0;
         line-height: 1.5;
     }
 
     .social-links-about a {
-        font-size: 1.12rem;
+        font-size: 1rem;
     }
 
     .image-placeholder-about {
