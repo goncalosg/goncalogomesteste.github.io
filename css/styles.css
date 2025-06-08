@@ -1214,10 +1214,6 @@ dd {
     }
 
     /* Hero */
-    .hero {
-        height: 100vh;
-    }
-
     .hero_container h4 {
         font-size: 1rem;
     }
