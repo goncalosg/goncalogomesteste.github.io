@@ -37,7 +37,7 @@ body {
   mix-blend-mode: difference; /* Cria contraste com o fundo */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a, p {
     font-weight: 300;
 }
 
@@ -94,6 +94,7 @@ nav {
 
 .logo, nav ul {
     font-size: 1.12rem;
+    font-weight: 300;
 }
 
 nav ul {
