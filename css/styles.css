@@ -99,7 +99,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 1rem;
     color:white;
 }
 
@@ -1206,10 +1206,6 @@ dd {
     nav a {
         font-size: 1rem;
     }
-
-    nav ul {
-        gap: 1rem;
-      }
 
     /* Hero */
     .hero_container h4 {
