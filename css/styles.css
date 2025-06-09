@@ -1425,17 +1425,6 @@ dd {
         font-size: 1rem;
     }
 
-    .nextimage p {
-    font-family: "fontregular";
-    font-size: 2.5rem;
-    color: #FAFAFA;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
-
     .nextimage {
     height: 25rem;
     }
