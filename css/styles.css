@@ -784,6 +784,13 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
+
+.nextimage a {
+  display: block;
+  position: relative; /* MUITO IMPORTANTE para o posicionamento do texto */
+  width: 100%;
+  height: 100%;
+}
   
 .nextimage img {
     width: 100%;
@@ -802,7 +809,7 @@ nav a.active { /* Na página ativa vai reduzir a opacidade do link */
 
 .nextimage p {
     font-family: "fontregular";
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: #FAFAFA;
     position: absolute;
     top: 50%;
