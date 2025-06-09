@@ -1425,6 +1425,17 @@ dd {
         font-size: 1rem;
     }
 
+    .text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+}
+
     .text-wrapper p {
         font-size: 1rem;
     }
